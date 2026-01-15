@@ -1,0 +1,32 @@
+ 
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+*.cache
+*.vspscc
+
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]rchive/
+bld/
+[Bb]in/
+[Oo]ut/
+[Ll]og/
+
+# NuGet Packages
+packages/
+
+# User-specific files
+*.rsuser
+*.scc
+*.user_osx

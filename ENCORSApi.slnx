@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ECNORSAppData/ECNORSAppData.csproj" />
+  <Project Path="ENCORSApi/ENCORSApi.csproj" />
+</Solution>
