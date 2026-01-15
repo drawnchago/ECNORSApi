@@ -2,10 +2,18 @@ using ECNORSApi.Config;
 using ECNORSApi.Factories;
 using ECNORSAppData.Data.Config;
 using ECNORSAppData.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ================= SERVICES =================
+//Log
+builder.Host.UseSerilog((ctx, lc) =>
+{
+    lc.ReadFrom.Configuration(ctx.Configuration)
+      .WriteTo.Console()
+      .WriteTo.File("Logs/api-.log", rollingInterval: RollingInterval.Day);
+});
 
 // Controllers
 builder.Services.AddControllers();

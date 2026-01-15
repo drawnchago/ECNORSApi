@@ -1,0 +1,20 @@
+2026-01-15 16:30:33.375 -06:00 [INF] Station.DbInfo start
+2026-01-15 16:30:38.417 -06:00 [INF] Station.DbInfo ok | result= dbctg | 172.21.1.100
+2026-01-15 16:30:38.635 -06:00 [INF] Dispensarios.Get start | station=Laboratorio
+2026-01-15 16:30:39.379 -06:00 [INF] Dispensarios.Get ok | station=Laboratorio | count=16
+2026-01-15 16:30:44.970 -06:00 [INF] Binnacle.Top start | dispensaryId=1
+2026-01-15 16:30:45.022 -06:00 [INF] Transactions.Top start | dispensaryId=1
+2026-01-15 16:30:45.249 -06:00 [INF] Binnacle.Top ok | count=7
+2026-01-15 16:30:45.579 -06:00 [INF] Transactions.Top ok | count=7
+2026-01-15 16:30:47.223 -06:00 [INF] Transactions.BySequence start | secuencia=9914880
+2026-01-15 16:30:47.309 -06:00 [INF] Transactions.BySequence ok | secuencia=9914880
+2026-01-15 16:30:53.323 -06:00 [INF] Station.DbInfo start
+2026-01-15 16:30:58.440 -06:00 [INF] Station.DbInfo ok | result= dbctg | 172.26.200.100
+2026-01-15 16:30:58.466 -06:00 [INF] Dispensarios.Get start | station=Monterrey
+2026-01-15 16:30:58.559 -06:00 [INF] Dispensarios.Get ok | station=Monterrey | count=9
+2026-01-15 16:31:00.612 -06:00 [INF] Binnacle.Top start | dispensaryId=2
+2026-01-15 16:31:00.614 -06:00 [INF] Transactions.Top start | dispensaryId=2
+2026-01-15 16:31:00.884 -06:00 [INF] Binnacle.Top ok | count=1
+2026-01-15 16:31:05.870 -06:00 [INF] Transactions.Top ok | count=1
+2026-01-15 16:31:07.091 -06:00 [INF] Transactions.BySequence start | secuencia=361205
+2026-01-15 16:31:07.161 -06:00 [INF] Transactions.BySequence ok | secuencia=361205

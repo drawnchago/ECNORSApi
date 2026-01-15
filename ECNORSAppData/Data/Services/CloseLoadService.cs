@@ -4,29 +4,32 @@ using ECNORSAppData.Data.DTO;
 using ECNORSAppData.Data.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using static System.Net.WebRequestMethods;
 
 namespace ECNORSAppData.Services
 {
     public interface ICloseLoadService
     {
-        Task<IReadOnlyList<DispensaryDto>> GetDispensariosAsync(CancellationToken ct = default);
+        Task<List<DispensaryDto>> GetDispensariosAsync(string station, CancellationToken ct);
         Task<string> GetDbInfoAsync(CancellationToken ct = default);
         Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(int dispensaryId, CancellationToken ct = default);
-        Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(int dispensaryId, CancellationToken ct = default); 
+        Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(int dispensaryId, CancellationToken ct = default);
         Task<TransactionDto?> GetTransactionBySequenceAsync(long secuencia, CancellationToken ct = default);
-        Task CloseManualAsync(int secuenciaBuscar,decimal totalizador,decimal volumenGross,decimal volumenNetoCt,decimal temperatura,CancellationToken ct = default);
-
+        Task CloseManualAsync(int secuenciaBuscar, decimal totalizador, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default);
     }
 
     public sealed class CloseLoadService : ICloseLoadService
     {
         private readonly IConnectionSelector _selector;
         private readonly SelectedConnectionState _state;
+        private readonly ILogger<CloseLoadService> _log;
 
-        public CloseLoadService(IConnectionSelector selector, SelectedConnectionState state)
+        public CloseLoadService(IConnectionSelector selector, SelectedConnectionState state, ILogger<CloseLoadService> log)
         {
             _selector = selector;
             _state = state;
+            _log = log;
         }
 
         private AppDbContext CreateDb()
@@ -63,14 +66,13 @@ namespace ECNORSAppData.Services
                     ex);
             }
         }
-
-
-
-        public async Task<IReadOnlyList<DispensaryDto>> GetDispensariosAsync(CancellationToken ct = default)
+        public async Task<List<DispensaryDto>> GetDispensariosAsync(string station, CancellationToken ct)
         {
-            await using var db = CreateDb();
 
-            return await db.tblDispensarios
+            await using var db = CreateDb();
+            var conn = db.Database.GetDbConnection();
+
+            var list = await db.tblDispensarios
                 .AsNoTracking()
                 .OrderBy(d => d.intDispensario)
                 .Select(d => new DispensaryDto
@@ -78,41 +80,55 @@ namespace ECNORSAppData.Services
                     DispensaryId = d.intDispensario
                 })
                 .ToListAsync(ct);
-        }
 
-        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(int dispensaryId, CancellationToken ct = default)
+            return list;
+        }
+        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(int dispensaryId,CancellationToken ct = default)
         {
-            await using var db = CreateDb();
+                await using var db = CreateDb();
+                var conn = db.Database.GetDbConnection();
+                var fromDate = DateTime.Now.AddHours(-24);
 
-            var fromDate = DateTime.Today.AddDays(-1);
+                var query = db.tblBitacoras
+                    .AsNoTracking()
+                    .Where(b => b.datFechaHora.HasValue &&
+                                b.datFechaHora.Value >= fromDate);
 
-            return await db.tblBitacoras
-                .AsNoTracking()
-                .Where(b => b.datFechaHora >= fromDate &&
-                            (dispensaryId == 0 || b.intDispensario == dispensaryId))
-                .OrderByDescending(b => b.intSecuencia)
-                .Take(7)
-                .Select(b => new BinnacleDto
+                if (dispensaryId != 0)
                 {
-                    id = b.intSecuencia,
-                    Date = b.datFechaHora,
-                    Observations = b.strObservaciones,
-                    Scheduled = b.dblProgramado,
-                    Sold = b.dblVendido,
-                    SoldVolume = b.dblVolumenVendido,
-                    UnitPrice = b.dblPrecioUnitario,
-                    Closed = b.bitCerrada,
+                    query = query.Where(b =>
+                        b.intDispensario.HasValue &&
+                        b.intDispensario.Value == dispensaryId);
+                }
 
-                    Totalizator = b.strTotalizador,
-                    OriginTotalizator = b.strTotalizadorOriginal,
-                    EndTotalizator = b.strTotalizadorFinalOriginal,
+                var list = await query
+                    .OrderByDescending(b => b.intSecuencia)
+                    .Take(7)
+                    .Select(b => new BinnacleDto
+                    {
+                        id = b.intSecuencia,
+                        Date = b.datFechaHora,
 
-                    DispensaryId = b.intDispensario,
-                    HoseId = b.intManguera,
-                    ProductId = b.intProducto
-                })
-                .ToListAsync(ct);
+                        Observations = b.strObservaciones,
+                        Scheduled = (double?)b.dblProgramado,
+                        Sold = (double?)b.dblVendido,
+                        SoldVolume = (double?)b.dblVolumenVendido,
+                        UnitPrice = (double?)b.dblPrecioUnitario,
+                        Closed = b.bitCerrada,
+
+                        DispensaryId = b.intDispensario,
+                        HoseId = b.intManguera,
+                        ProductId = b.intProducto,
+
+                        Totalizator = b.strTotalizador,
+                        OriginTotalizator = b.strTotalizadorOriginal,
+                        EndTotalizator = b.strTotalizadorFinalOriginal
+                    })
+                    .ToListAsync(ct);
+
+                return list;
         }
+
 
         public async Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(int dispensaryId, CancellationToken ct = default)
         {

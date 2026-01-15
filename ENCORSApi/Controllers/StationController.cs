@@ -8,30 +8,41 @@ namespace ENCORSApi.Controllers;
 public sealed class StationController : ControllerBase
 {
     private readonly ICloseLoadService _svc;
+    private readonly ILogger<StationController> _log;
 
-    public StationController(ICloseLoadService svc) => _svc = svc;
-
-[HttpGet("db-info")]
-public async Task<IActionResult> DbInfo(CancellationToken ct)
-{
-    try
+    public StationController(ICloseLoadService svc, ILogger<StationController> log)
     {
-        var result = await _svc.GetDbInfoAsync(ct);
+        _svc = svc;
+        _log = log;
+    }
 
-        return Ok(new
-        {
-            success = true,
-            message = "Conexión establecida |" + result,
-        });
-    }
-    catch (Exception ex)
+    [HttpGet("db-info")]
+    public async Task<IActionResult> DbInfo(CancellationToken ct)
     {
-        return StatusCode(500, new
+        try
         {
-            success = false,
-            message = ex.Message
-        });
+            _log.LogInformation("Station.DbInfo start");
+
+            var result = await _svc.GetDbInfoAsync(ct);
+
+            _log.LogInformation("Station.DbInfo ok | result={Result}", result);
+
+            return Ok(new
+            {
+                Success = true,
+                Message = "Conexión establecida | " + result,
+            });
+        }catch (Exception ex)
+        {
+            _log.LogError(ex, "Station.DbInfo error");
+
+            return StatusCode(500, new
+            {
+                Success = false,
+                Message = ex.Message
+            });
+        }
     }
-}
+
 
 }
