@@ -22,10 +22,11 @@ public sealed class StationController : ControllerBase
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> DbInfo(CancellationToken ct)
     {
+        var aborted = HttpContext.RequestAborted;
+        _log.LogInformation("Station.DbInfo start");
+
         try
         {
-            _log.LogInformation("Station.DbInfo start");
-
             var result = await _svc.GetDbInfoAsync(ct);
 
             if (string.IsNullOrWhiteSpace(result))
@@ -46,6 +47,11 @@ public sealed class StationController : ControllerBase
                 Success = true,
                 Message = "Conexión establecida | " + result
             });
+        }
+        catch (OperationCanceledException) when (aborted.IsCancellationRequested)
+        {
+            _log.LogWarning("Station.DbInfo canceled (OperationCanceledException)");
+            return StatusCode(499, new { Success = false, Message = "Solicitud cancelada por el cliente." });
         }
         catch (Exception ex)
         {
