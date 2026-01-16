@@ -19,15 +19,42 @@ public sealed class BinnacleController : ControllerBase
     }
 
     [HttpGet("top")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Top([FromQuery] int dispensaryId, CancellationToken ct)
     {
+        if (dispensaryId <= 0)
+        {
+            _log.LogWarning("Binnacle.Top | dispensaryId inválido: {DispensaryId}", dispensaryId);
+
+            return BadRequest(new
+            {
+                Success = false,
+                Message = "El parámetro 'dispensaryId' debe ser mayor a cero."
+            });
+        }
+
         try
         {
             _log.LogInformation("Binnacle.Top start | dispensaryId={DispensaryId}", dispensaryId);
 
             var list = await _svc.GetBinnacleTopAsync(dispensaryId, ct);
 
-            _log.LogInformation("Binnacle.Top ok | count={Count}", list.Count);
+            if (list is null || list.Count == 0)
+            {
+                _log.LogWarning("Binnacle.Top | sin resultados | dispensaryId={DispensaryId}", dispensaryId);
+
+                return NotFound(new
+                {
+                    Success = false,
+                    Message = $"No se encontró bitácora para el dispensario {dispensaryId}.",
+                    Data = Array.Empty<object>() // o quítalo si no quieres Data en 404
+                });
+            }
+
+            _log.LogInformation("Binnacle.Top ok | dispensaryId={DispensaryId} | count={Count}", dispensaryId, list.Count);
 
             return Ok(new
             {
@@ -43,7 +70,7 @@ public sealed class BinnacleController : ControllerBase
             return StatusCode(500, new
             {
                 Success = false,
-                Message = "Error al obtener la bitácora"+"Error=>"+ ex.Message
+                Message = "Error al obtener la bitácora top"
             });
         }
     }
@@ -72,7 +99,7 @@ public sealed class BinnacleController : ControllerBase
             return StatusCode(500, new
             {
                 success = false,
-                message = "Error al ejecutar cierre manual => " + ex.Message
+                message = "Error al ejecutar cierre manual"
             });
         }
     }

@@ -17,6 +17,9 @@ public sealed class StationController : ControllerBase
     }
 
     [HttpGet("db-info")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> DbInfo(CancellationToken ct)
     {
         try
@@ -25,21 +28,33 @@ public sealed class StationController : ControllerBase
 
             var result = await _svc.GetDbInfoAsync(ct);
 
+            if (string.IsNullOrWhiteSpace(result))
+            {
+                _log.LogWarning("Station.DbInfo | sin información de base de datos");
+
+                return NotFound(new
+                {
+                    Success = false,
+                    Message = "No se pudo obtener información de la base de datos."
+                });
+            }
+
             _log.LogInformation("Station.DbInfo ok | result={Result}", result);
 
             return Ok(new
             {
                 Success = true,
-                Message = "Conexión establecida | " + result,
+                Message = "Conexión establecida | " + result
             });
-        }catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             _log.LogError(ex, "Station.DbInfo error");
 
-            return StatusCode(500, new
+            return StatusCode(StatusCodes.Status500InternalServerError, new
             {
                 Success = false,
-                Message = ex.Message
+                Message = "Error interno al validar conexión con la base de datos."
             });
         }
     }

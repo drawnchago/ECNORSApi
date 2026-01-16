@@ -18,16 +18,39 @@ public sealed class DispensaryController : ControllerBase
     }
 
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Get([FromQuery] string station, CancellationToken ct)
     {
+        if (string.IsNullOrWhiteSpace(station))
+        {
+            _log.LogWarning("Dispensarios.Get | station vacío o nulo");
+
+            return BadRequest(new
+            {
+                success = false,
+                message = "El parámetro 'station' es obligatorio."
+            });
+        }
         try
         {
-            if (string.IsNullOrWhiteSpace(station))
-                return BadRequest(new { success = false, message = "El parámetro 'station' es requerido." });
-
             _log.LogInformation("Dispensarios.Get start | station={Station}", station);
 
             var list = await _svc.GetDispensariosAsync(station, ct);
+
+            if (list is null || list.Count == 0)
+            {
+                _log.LogWarning("Dispensarios.Get | sin resultados | station={Station}", station);
+
+                return NotFound(new
+                {
+                    success = false,
+                    message = $"No se encontraron dispensarios para la estación '{station}'.",
+                    data = Array.Empty<object>()
+                });
+            }
 
             _log.LogInformation("Dispensarios.Get ok | station={Station} | count={Count}", station, list.Count);
 
@@ -45,7 +68,7 @@ public sealed class DispensaryController : ControllerBase
             return StatusCode(500, new
             {
                 success = false,
-                message = "Error al obtener dispensarios => " + ex.Message
+                message = "Error al obtener dispensarios"
             });
         }
     }
