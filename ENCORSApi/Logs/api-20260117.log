@@ -1,0 +1,78 @@
+2026-01-17 12:25:17.937 -06:00 [INF] Station.DbInfo start
+2026-01-17 12:25:21.857 -06:00 [INF] Station.DbInfo ok | result= dbctg | 172.21.1.100
+2026-01-17 12:25:22.010 -06:00 [INF] Dispensarios.Get start | station=Laboratorio
+2026-01-17 12:25:22.892 -06:00 [INF] Dispensarios.Get ok | station=Laboratorio | count=16
+2026-01-17 12:25:26.860 -06:00 [INF] Binnacle.Top start | dispensaryId=1
+2026-01-17 12:25:26.917 -06:00 [INF] Transactions.Top start | dispensaryId=1
+2026-01-17 12:25:27.205 -06:00 [INF] Binnacle.Top ok | dispensaryId=1 | count=7
+2026-01-17 12:25:29.105 -06:00 [INF] Transactions.Top ok | dispensaryId=1 | count=7
+2026-01-17 12:25:30.557 -06:00 [INF] Transactions.BySequence start | secuencia=9918400
+2026-01-17 12:25:30.626 -06:00 [INF] Transactions.BySequence ok | secuencia=9918400
+2026-01-17 12:26:31.322 -06:00 [INF] Station.DbInfo start
+2026-01-17 12:26:40.240 -06:00 [INF] Station.DbInfo ok | result= dbctg | 172.26.200.100
+2026-01-17 12:26:40.380 -06:00 [INF] Dispensarios.Get start | station=Monterrey
+2026-01-17 12:26:41.097 -06:00 [INF] Dispensarios.Get ok | station=Monterrey | count=9
+2026-01-17 12:26:54.475 -06:00 [INF] Binnacle.Top start | dispensaryId=9
+2026-01-17 12:26:54.492 -06:00 [INF] Transactions.Top start | dispensaryId=9
+2026-01-17 12:26:54.807 -06:00 [WRN] Binnacle.Top | sin resultados | dispensaryId=9
+2026-01-17 12:26:59.748 -06:00 [WRN] Transactions.Top | sin resultados | dispensaryId=9
+2026-01-17 12:27:08.382 -06:00 [INF] Binnacle.Top start | dispensaryId=7
+2026-01-17 12:27:08.382 -06:00 [INF] Transactions.Top start | dispensaryId=7
+2026-01-17 12:27:08.461 -06:00 [WRN] Transactions.Top | sin resultados | dispensaryId=7
+2026-01-17 12:27:08.507 -06:00 [WRN] Binnacle.Top | sin resultados | dispensaryId=7
+2026-01-17 12:27:10.779 -06:00 [INF] Transactions.Top start | dispensaryId=1
+2026-01-17 12:27:10.779 -06:00 [INF] Binnacle.Top start | dispensaryId=1
+2026-01-17 12:27:10.880 -06:00 [INF] Binnacle.Top ok | dispensaryId=1 | count=7
+2026-01-17 12:27:10.906 -06:00 [INF] Transactions.Top ok | dispensaryId=1 | count=7
+2026-01-17 12:27:13.081 -06:00 [INF] Transactions.Top start | dispensaryId=2
+2026-01-17 12:27:13.081 -06:00 [INF] Binnacle.Top start | dispensaryId=2
+2026-01-17 12:27:13.188 -06:00 [INF] Transactions.Top ok | dispensaryId=2 | count=2
+2026-01-17 12:27:13.203 -06:00 [WRN] Binnacle.Top | sin resultados | dispensaryId=2
+2026-01-17 12:27:20.455 -06:00 [INF] Binnacle.Top start | dispensaryId=1
+2026-01-17 12:27:20.455 -06:00 [INF] Transactions.Top start | dispensaryId=1
+2026-01-17 12:27:20.532 -06:00 [INF] Transactions.Top ok | dispensaryId=1 | count=7
+2026-01-17 12:27:20.609 -06:00 [INF] Binnacle.Top ok | dispensaryId=1 | count=7
+2026-01-17 12:27:22.406 -06:00 [INF] Transactions.BySequence start | secuencia=361309
+2026-01-17 12:27:22.539 -06:00 [INF] Transactions.BySequence ok | secuencia=361309
+2026-01-17 12:27:49.758 -06:00 [INF] Binnacle.Top start | dispensaryId=2
+2026-01-17 12:27:49.764 -06:00 [INF] Transactions.Top start | dispensaryId=2
+2026-01-17 12:27:49.851 -06:00 [WRN] Binnacle.Top | sin resultados | dispensaryId=2
+2026-01-17 12:27:49.867 -06:00 [INF] Transactions.Top ok | dispensaryId=2 | count=2
+2026-01-17 12:28:08.764 -06:00 [INF] Station.DbInfo start
+2026-01-17 12:28:14.054 -06:00 [INF] Station.DbInfo ok | result= dbctg | 172.26.201.100
+2026-01-17 12:28:14.097 -06:00 [INF] Dispensarios.Get start | station=Queretaro
+2026-01-17 12:28:14.213 -06:00 [INF] Dispensarios.Get ok | station=Queretaro | count=7
+2026-01-17 12:28:16.944 -06:00 [INF] Binnacle.Top start | dispensaryId=2
+2026-01-17 12:28:16.944 -06:00 [INF] Transactions.Top start | dispensaryId=2
+2026-01-17 12:28:17.062 -06:00 [INF] Binnacle.Top ok | dispensaryId=2 | count=4
+2026-01-17 12:28:22.119 -06:00 [INF] Transactions.Top ok | dispensaryId=2 | count=7
+2026-01-17 12:28:25.133 -06:00 [INF] Binnacle.Top start | dispensaryId=7
+2026-01-17 12:28:25.133 -06:00 [INF] Transactions.Top start | dispensaryId=7
+2026-01-17 12:28:25.297 -06:00 [INF] Transactions.Top ok | dispensaryId=7 | count=7
+2026-01-17 12:28:25.319 -06:00 [INF] Binnacle.Top ok | dispensaryId=7 | count=4
+2026-01-17 12:28:27.875 -06:00 [INF] Binnacle.Top start | dispensaryId=3
+2026-01-17 12:28:27.875 -06:00 [INF] Transactions.Top start | dispensaryId=3
+2026-01-17 12:28:28.061 -06:00 [INF] Transactions.Top ok | dispensaryId=3 | count=5
+2026-01-17 12:28:28.070 -06:00 [INF] Binnacle.Top ok | dispensaryId=3 | count=2
+2026-01-17 12:28:29.611 -06:00 [INF] Transactions.Top start | dispensaryId=5
+2026-01-17 12:28:29.611 -06:00 [INF] Binnacle.Top start | dispensaryId=5
+2026-01-17 12:28:29.737 -06:00 [INF] Transactions.Top ok | dispensaryId=5 | count=7
+2026-01-17 12:28:29.800 -06:00 [INF] Binnacle.Top ok | dispensaryId=5 | count=7
+2026-01-17 12:32:55.941 -06:00 [INF] Station.DbInfo start
+2026-01-17 12:32:56.307 -06:00 [INF] Station.DbInfo ok | result= dbctg | 172.21.1.100
+2026-01-17 12:32:56.323 -06:00 [INF] Dispensarios.Get start | station=Laboratorio
+2026-01-17 12:32:56.377 -06:00 [INF] Dispensarios.Get ok | station=Laboratorio | count=16
+2026-01-17 12:32:59.980 -06:00 [INF] Binnacle.Top start | dispensaryId=2
+2026-01-17 12:33:00.002 -06:00 [INF] Transactions.Top start | dispensaryId=2
+2026-01-17 12:33:00.036 -06:00 [INF] Binnacle.Top ok | dispensaryId=2 | count=7
+2026-01-17 12:33:01.149 -06:00 [INF] Transactions.Top ok | dispensaryId=2 | count=7
+2026-01-17 12:33:02.600 -06:00 [INF] Transactions.BySequence start | secuencia=9918428
+2026-01-17 12:33:02.653 -06:00 [INF] Transactions.BySequence ok | secuencia=9918428
+2026-01-17 12:33:24.609 -06:00 [INF] Station.DbInfo start
+2026-01-17 12:33:29.644 -06:00 [INF] Station.DbInfo ok | result= dbctg | 172.26.200.100
+2026-01-17 12:33:29.696 -06:00 [INF] Dispensarios.Get start | station=Monterrey
+2026-01-17 12:33:29.819 -06:00 [INF] Dispensarios.Get ok | station=Monterrey | count=9
+2026-01-17 12:33:31.877 -06:00 [INF] Binnacle.Top start | dispensaryId=9
+2026-01-17 12:33:31.877 -06:00 [INF] Transactions.Top start | dispensaryId=9
+2026-01-17 12:33:31.997 -06:00 [WRN] Binnacle.Top | sin resultados | dispensaryId=9
+2026-01-17 12:33:36.965 -06:00 [WRN] Transactions.Top | sin resultados | dispensaryId=9
