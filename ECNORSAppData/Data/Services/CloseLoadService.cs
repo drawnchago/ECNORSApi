@@ -5,6 +5,7 @@ using ECNORSAppData.Data.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using static System.Collections.Specialized.BitVector32;
 using static System.Net.WebRequestMethods;
 
 namespace ECNORSAppData.Services
@@ -12,11 +13,12 @@ namespace ECNORSAppData.Services
     public interface ICloseLoadService
     {
         Task<List<DispensaryDto>> GetDispensariosAsync(string station, CancellationToken ct);
-        Task<string> GetDbInfoAsync(CancellationToken ct = default);
-        Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(int dispensaryId, CancellationToken ct = default);
-        Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(int dispensaryId, CancellationToken ct = default);
-        Task<TransactionDto?> GetTransactionBySequenceAsync(long secuencia, CancellationToken ct = default);
-        Task CloseManualAsync(int secuenciaBuscar, decimal totalizador, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default);
+        Task<string> GetDbInfoAsync(string station,CancellationToken ct = default);
+        Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(string station, int dispensaryId, CancellationToken ct = default);
+        Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station, int dispensaryId, CancellationToken ct = default);
+        Task<TransactionDto?> GetTransactionBySequenceAsync(string station, long secuencia, CancellationToken ct = default);
+        Task CloseManualAsync(string station, int secuenciaBuscar, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default);
+        Task<decimal> GetNetVolAutoAsync(string station,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default);
     }
 
     public sealed class CloseLoadService : ICloseLoadService
@@ -32,11 +34,10 @@ namespace ECNORSAppData.Services
             _log = log;
         }
 
-        private AppDbContext CreateDb()
+        private AppDbContext CreateDb(String station)
         {
             var all = _selector.GetConnections();
-            var selectedName = _state.GetSelectedName();
-            var item = all.FirstOrDefault(x => x.name == selectedName) ?? all.FirstOrDefault();
+            var item = all.FirstOrDefault(x => x.name == station) ?? all.FirstOrDefault();
 
             var cs = item is not null
                 ? _selector.BuildConnectionString(item)
@@ -49,11 +50,11 @@ namespace ECNORSAppData.Services
             return new AppDbContext(options);
         }
 
-        public async Task<string> GetDbInfoAsync(CancellationToken ct = default)
+        public async Task<string> GetDbInfoAsync(string station,CancellationToken ct = default)
         {
             try
             {
-                await using var db = CreateDb();
+                await using var db = CreateDb(station);
                 await db.Database.OpenConnectionAsync(ct);
 
                 var conn = db.Database.GetDbConnection();
@@ -69,7 +70,7 @@ namespace ECNORSAppData.Services
         public async Task<List<DispensaryDto>> GetDispensariosAsync(string station, CancellationToken ct)
         {
 
-            await using var db = CreateDb();
+            await using var db = CreateDb(station);
             var conn = db.Database.GetDbConnection();
 
             var list = await db.tblDispensarios
@@ -83,9 +84,9 @@ namespace ECNORSAppData.Services
 
             return list;
         }
-        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(int dispensaryId,CancellationToken ct = default)
+        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station, int dispensaryId,CancellationToken ct = default)
         {
-                await using var db = CreateDb();
+                await using var db = CreateDb(station);
                 var conn = db.Database.GetDbConnection();
                 var fromDate = DateTime.Now.AddHours(-24);
 
@@ -130,9 +131,9 @@ namespace ECNORSAppData.Services
         }
 
 
-        public async Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(int dispensaryId, CancellationToken ct = default)
+        public async Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(string station, int dispensaryId, CancellationToken ct = default)
         {
-            await using var db = CreateDb();
+            await using var db = CreateDb(station);
 
             var fromDate = DateTime.Today.AddDays(-1);
 
@@ -159,9 +160,9 @@ namespace ECNORSAppData.Services
 
             return list;
         }
-        public async Task<TransactionDto?> GetTransactionBySequenceAsync(long secuencia, CancellationToken ct = default)
+        public async Task<TransactionDto?> GetTransactionBySequenceAsync(string station, long secuencia, CancellationToken ct = default)
         {
-            await using var db = CreateDb();
+            await using var db = CreateDb(station);
 
             return await db.tblTransacciones
                 .AsNoTracking()
@@ -177,31 +178,58 @@ namespace ECNORSAppData.Services
                 .FirstOrDefaultAsync(ct);
         }
 
-        public async Task CloseManualAsync(
-            int secuenciaBuscar,
-            decimal totalizador,
-            decimal volumenGross,
-            decimal volumenNetoCt,
-            decimal temperatura,
-            CancellationToken ct = default)
+        public async Task CloseManualAsync(string station, int secuenciaBuscar,decimal volumenGross,decimal volumenNetoCt,decimal temperatura,CancellationToken ct = default)
         {
-            await using var db = CreateDb();
+            try
+            {
+
+            await using var db = CreateDb(station);
 
             var pSec = new SqlParameter("@SecuenciaBuscar", secuenciaBuscar);
-            var pTot = new SqlParameter("@Totalizador", totalizador);
             var pGross = new SqlParameter("@VolumenGROSS", volumenGross);
             var pNeto = new SqlParameter("@VolumenNetoCT", volumenNetoCt);
             var pTemp = new SqlParameter("@Temperatura", temperatura);
 
-            db.Database.SetCommandTimeout(120);
+            db.Database.SetCommandTimeout(10000);
 
             await db.Database.ExecuteSqlRawAsync(
-                "EXEC dbo.sp_Binnacle_CloseManual @SecuenciaBuscar, @Totalizador, @VolumenGROSS, @VolumenNetoCT, @Temperatura",
-                new object[] { pSec, pTot, pGross, pNeto, pTemp },
+                "EXEC dbo.sp_Binnacle_CloseManual @SecuenciaBuscar, @VolumenNetoCT,@VolumenGROSS, @Temperatura",
+                new object[] { pSec, pNeto, pGross, pTemp },
                 ct);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
+       public async Task<decimal> GetNetVolAutoAsync(string station ,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default)
+        {
+            await using var db = CreateDb(station);
 
+            var pDisp = new SqlParameter("@intDispensario", intDispensario);
+            var pProd = new SqlParameter("@intProducto", intProducto);
+            var pTemp = new SqlParameter("@Temperatura", temperatura);
+            var pGross = new SqlParameter("@VolumenGross", volumenGross);
+
+            db.Database.SetCommandTimeout(10000);
+
+            var sql = @"
+                        SELECT dbo.fn_VolumenCorregido(
+                            @intDispensario,
+                            @intProducto,
+                            @Temperatura,
+                            @VolumenGross
+                        )AS Value";
+
+            var result = await db.Database
+                .SqlQueryRaw<decimal>(sql, pDisp, pProd, pTemp, pGross)
+                .SingleAsync(ct);
+
+            return result;
+        }
+       
     }
 
 }

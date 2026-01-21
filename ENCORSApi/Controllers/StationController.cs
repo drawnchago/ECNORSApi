@@ -20,14 +20,14 @@ public sealed class StationController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> DbInfo(CancellationToken ct)
+    public async Task<IActionResult> DbInfo(String station,CancellationToken ct)
     {
         var aborted = HttpContext.RequestAborted;
         _log.LogInformation("Station.DbInfo start");
 
         try
         {
-            var result = await _svc.GetDbInfoAsync(ct);
+            var result = await _svc.GetDbInfoAsync(station,ct);
 
             if (string.IsNullOrWhiteSpace(result))
             {

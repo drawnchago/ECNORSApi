@@ -3,6 +3,7 @@ using ENCORSApi.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using static System.Collections.Specialized.BitVector32;
 
 namespace ENCORSApi.Controllers;
 
@@ -23,7 +24,7 @@ public sealed class BinnacleController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Top([FromQuery] int dispensaryId, CancellationToken ct)
+    public async Task<IActionResult> Top([FromQuery] string station,int dispensaryId, CancellationToken ct)
     {
         if (dispensaryId <= 0)
         {
@@ -40,7 +41,7 @@ public sealed class BinnacleController : ControllerBase
         {
             _log.LogInformation("Binnacle.Top start | dispensaryId={DispensaryId}", dispensaryId);
 
-            var list = await _svc.GetBinnacleTopAsync(dispensaryId, ct);
+            var list = await _svc.GetBinnacleTopAsync(station, dispensaryId, ct);
 
             if (list is null || list.Count == 0)
             {
@@ -80,9 +81,9 @@ public sealed class BinnacleController : ControllerBase
     {
         try
         {
-            _log.LogInformation("Binnacle.CloseManual start | Secuencia={Secuencia} | Totalizador={Totalizador} | Gross={Gross} | Neto={Neto} | Temp={Temp}",req.SecuenciaBuscar,req.Totalizador,req.VolumenGross,req.VolumenNetoCt,req.Temperatura);
+            _log.LogInformation("Binnacle.CloseManual start | Secuencia={Secuencia} | Gross={Gross} | Neto={Neto} | Temp={Temp}",req.SecuenciaBuscar,req.VolumenGross,req.VolumenNetoCt,req.Temperatura);
 
-            await _svc.CloseManualAsync(req.SecuenciaBuscar,req.Totalizador,req.VolumenGross,req.VolumenNetoCt,req.Temperatura,ct);
+            await _svc.CloseManualAsync(req.station,req.SecuenciaBuscar,req.VolumenGross,req.VolumenNetoCt,req.Temperatura,ct);
 
             _log.LogInformation("Binnacle.CloseManual ok | Secuencia={Secuencia}",req.SecuenciaBuscar);
 
@@ -103,4 +104,53 @@ public sealed class BinnacleController : ControllerBase
             });
         }
     }
+
+    [HttpPost("GetNetVolAuto")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> GetNetVolAuto([FromBody] GetNetVolAutoRequest req, CancellationToken ct)
+    {
+        try
+        {
+            _log.LogInformation(
+                "Binnacle.GetNetVolAuto start | Dispensario={Disp} | Producto={Prod} | Gross={Gross} | Temp={Temp}",
+                req.IntDispensario, req.IntProducto, req.VolumenGross, req.Temperatura);
+
+            var neto = await _svc.GetNetVolAutoAsync(
+                req.station,
+                req.IntDispensario,
+                req.IntProducto,
+                req.Temperatura,
+                req.VolumenGross,
+                ct);
+
+            _log.LogInformation(
+                "Binnacle.GetNetVolAuto ok | Dispensario={Disp} | Producto={Prod} | Neto={Neto}",
+                req.IntDispensario, req.IntProducto, neto);
+
+            return Ok(new
+            {
+                success = true,
+                message = "Volumen Neto calculado correctamente",
+                data = neto
+            });
+        }
+        catch (Exception ex)
+        {
+            _log.LogError(
+                ex,
+                "Binnacle.GetNetVolAuto error | Dispensario={Disp} | Producto={Prod}",
+                req.IntDispensario, req.IntProducto);
+
+            return StatusCode(500, new
+            {
+                success = false,
+                message = "Error al calcular volumen neto"
+            });
+        }
+    }
+
+
 }

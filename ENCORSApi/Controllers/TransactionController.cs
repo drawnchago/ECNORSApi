@@ -21,7 +21,7 @@ public sealed class TransactionController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Top([FromQuery] int dispensaryId,CancellationToken ct)
+    public async Task<IActionResult> Top([FromQuery] string station,int dispensaryId,CancellationToken ct)
     {
         if (dispensaryId <= 0)
         {
@@ -38,7 +38,7 @@ public sealed class TransactionController : ControllerBase
         {
             _log.LogInformation("Transactions.Top start | dispensaryId={DispensaryId}",dispensaryId);
 
-            var list = await _svc.GetTransactionsTopAsync(dispensaryId, ct);
+            var list = await _svc.GetTransactionsTopAsync(station,dispensaryId, ct);
 
             if (list is null || list.Count == 0)
             {
@@ -69,7 +69,7 @@ public sealed class TransactionController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> BySequence(long secuencia,CancellationToken ct)
+    public async Task<IActionResult> BySequence(string station,long secuencia,CancellationToken ct)
     {
         if (secuencia <= 0)
         {
@@ -86,7 +86,7 @@ public sealed class TransactionController : ControllerBase
         {
             _log.LogInformation("Transactions.BySequence start | secuencia={Secuencia}",secuencia);
 
-            var item = await _svc.GetTransactionBySequenceAsync(secuencia, ct);
+            var item = await _svc.GetTransactionBySequenceAsync(station,secuencia, ct);
 
             if (item is null)
             {
