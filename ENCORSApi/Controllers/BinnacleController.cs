@@ -47,7 +47,7 @@ public sealed class BinnacleController : ControllerBase
             {
                 _log.LogWarning("Binnacle.Top | sin resultados | dispensaryId={DispensaryId}", dispensaryId);
 
-                return NotFound(new
+                return Ok(new
                 {
                     Success = false,
                     Message = $"No se encontró bitácora para el dispensario {dispensaryId}.",

@@ -54,7 +54,12 @@ public sealed class TransactionController : ControllerBase
 
             _log.LogInformation("Transactions.Top ok | dispensaryId={DispensaryId} | count={Count}", dispensaryId, list.Count);
 
-            return Ok(list);
+            return Ok(new
+            {
+                Success = true,
+                Message = "Transacciones obtenidas correctamente",
+                Data = list
+            });
         }
         catch (Exception ex)
         {

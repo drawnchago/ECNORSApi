@@ -1,0 +1,155 @@
+2026-01-22 08:13:18.872 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:13:19.109 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct)
+2026-01-22 08:13:19.113 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:13:28.300 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct)
+2026-01-22 08:13:28.300 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:13:32.092 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct)
+2026-01-22 08:13:32.092 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:13:43.408 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct)
+2026-01-22 08:13:59.347 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:14:14.501 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct)
+2026-01-22 08:14:23.049 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:14:38.197 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct)
+2026-01-22 08:15:47.442 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:16:00.853 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 30
+2026-01-22 08:17:06.683 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:17:19.540 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 30
+2026-01-22 08:17:21.386 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:17:25.703 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 30
+2026-01-22 08:19:01.211 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:19:16.255 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 30
+2026-01-22 08:26:46.036 -06:00 [INF] Station.DbInfo start
+2026-01-22 08:27:00.483 -06:00 [ERR] Station.DbInfo error
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 58
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 61
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 65
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 30
