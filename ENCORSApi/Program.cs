@@ -3,6 +3,8 @@ using ECNORSApi.Factories;
 using ECNORSAppData.Data.Config;
 using ECNORSAppData.Services;
 using Serilog;
+using Microsoft.Extensions.FileProviders;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,8 @@ builder.Host.UseSerilog((ctx, lc) =>
 {
     lc.ReadFrom.Configuration(ctx.Configuration)
       .WriteTo.Console()
-      .WriteTo.File("Logs/api-.log", rollingInterval: RollingInterval.Day);
+      .WriteTo.File("Logs/api-.log", rollingInterval: RollingInterval.Day,
+      retainedFileCountLimit: 5);
 });
 
 // Controllers
@@ -41,14 +44,20 @@ builder.Services.AddCors(opt =>
 var app = builder.Build();
 
 app.UseCors();
+
+var webRoot = Path.Combine(app.Environment.ContentRootPath, "wwwroot");
+
+app.UseStaticFiles();
+
 // ================= MIDDLEWARE =================
 
 // Swagger SIEMPRE habilitado (útil para IIS y pruebas)
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ECNORS API v1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ECNORSA API v1");
     c.RoutePrefix = "swagger"; // https://host/swagger
+    c.HeadContent = @"<link rel='icon' type='image/jpeg' href='/assets/ecnorsa.jpeg' /><script src='/assets/swagger-logo.js'></script>";
 });
 
 app.Use(async (ctx, next) =>
