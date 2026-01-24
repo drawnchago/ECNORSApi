@@ -57,7 +57,10 @@ app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "ECNORSA API v1");
     c.RoutePrefix = "swagger"; // https://host/swagger
-    c.HeadContent = @"<link rel='icon' type='image/jpeg' href='/assets/ecnorsa.jpeg' /><script src='/assets/swagger-logo.js'></script>";
+
+    c.DocumentTitle = "ECNORSA API´s";
+
+    c.HeadContent = @"<link rel='icon' type='image/x-icon' href='/assets/orsan.ico' /><script src='/assets/swagger-logo.js'></script>";
 });
 
 app.Use(async (ctx, next) =>
