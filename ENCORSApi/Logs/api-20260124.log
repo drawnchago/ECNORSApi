@@ -28,3 +28,183 @@
 2026-01-24 11:46:18.095 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361823
 2026-01-24 11:46:18.098 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361823
 2026-01-24 11:46:18.164 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361823
+2026-01-24 12:51:11.186 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 12:51:11.239 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 12:51:20.031 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 12:51:20.200 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 12:51:20.203 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 12:51:20.985 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 12:51:38.554 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 12:51:38.560 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 12:51:38.565 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 12:51:38.567 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 12:51:38.838 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 12:51:43.737 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 12:51:46.172 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 12:51:46.176 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 12:51:46.330 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:01:06.631 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:01:06.633 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:01:11.669 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:01:11.780 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:01:11.782 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:01:11.863 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:01:14.407 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:01:14.409 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:01:14.433 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:01:14.435 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:01:14.611 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:01:19.700 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:01:20.973 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:01:20.976 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:01:21.090 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:07:53.006 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:07:53.008 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:07:53.011 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:07:53.140 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:07:53.143 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:07:53.211 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:07:55.667 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:07:55.669 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:07:55.688 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:07:55.689 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:07:55.783 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:07:55.790 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:07:57.344 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:07:57.347 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:07:57.483 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:10:22.029 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:10:22.031 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:10:22.033 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:10:22.204 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:10:22.205 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:10:22.274 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:10:26.217 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:10:26.220 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:10:26.236 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:10:26.237 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:10:26.323 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:10:26.328 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:10:28.219 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:10:28.223 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:10:28.289 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:14:51.258 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:14:51.259 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:14:51.262 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:14:51.400 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:14:51.402 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:14:51.532 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:14:55.981 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:14:55.983 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:14:55.995 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:14:55.996 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:14:56.076 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:14:56.096 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:14:57.300 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:14:57.302 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:14:57.402 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:18:47.256 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:18:47.258 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:18:47.261 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:18:47.388 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:18:47.390 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:18:47.463 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:18:49.812 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:18:49.814 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:18:49.832 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:18:49.834 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:18:50.018 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:18:50.019 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:18:51.287 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:18:51.289 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:18:51.380 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:24:42.506 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:24:42.507 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:24:48.464 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:24:48.600 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:24:48.602 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:24:53.608 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:24:56.773 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:24:56.775 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:24:56.793 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:24:56.794 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:24:56.886 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:25:01.768 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:25:03.325 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:25:03.327 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:25:03.422 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:27:33.128 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:27:33.130 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:27:33.133 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:27:33.269 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:27:33.271 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:27:33.327 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:27:35.386 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:27:35.388 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:27:35.422 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:27:35.424 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:27:35.473 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:27:35.526 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:27:36.674 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:27:36.676 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:27:36.732 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:28:42.729 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:28:42.731 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:28:42.733 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:28:42.847 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:28:42.848 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:28:42.937 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:28:44.797 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:28:44.800 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:28:44.811 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:28:44.813 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:28:44.881 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:28:44.937 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:28:45.951 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:28:45.952 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:28:46.080 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:30:06.304 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:30:06.305 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:30:06.308 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:30:06.445 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:30:06.447 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:30:06.512 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:30:08.995 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:30:08.997 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:30:09.016 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:30:09.018 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:30:09.082 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:30:09.104 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:30:10.223 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:30:10.225 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:30:10.367 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:31:13.714 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:31:13.716 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:31:13.719 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:31:13.890 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:31:13.892 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:31:13.979 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:31:16.761 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:31:16.763 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:31:16.793 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:31:16.795 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:31:16.900 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:31:16.923 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:31:19.308 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:31:19.311 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:31:19.383 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:33:13.731 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-24 13:33:13.733 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-24 13:33:13.735 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-24 13:33:13.897 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-24 13:33:13.899 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-24 13:33:14.025 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-24 13:33:16.314 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2
+2026-01-24 13:33:16.315 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 
+2026-01-24 13:33:16.328 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:33:16.329 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:33:16.414 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-01-24 13:33:16.425 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=2 | count=7
+2026-01-24 13:33:17.616 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:33:17.618 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 361824
+2026-01-24 13:33:17.721 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 361824

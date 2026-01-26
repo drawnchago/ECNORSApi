@@ -1,0 +1,29 @@
+2026-01-26 08:44:04.495 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-26 08:44:04.569 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-26 08:44:14.731 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-26 08:44:15.210 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-26 08:44:15.213 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-26 08:44:16.079 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-26 08:44:25.180 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=4
+2026-01-26 08:44:25.187 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=4 
+2026-01-26 08:44:25.490 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 4
+2026-01-26 08:44:25.492 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 4
+2026-01-26 08:44:25.548 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Monterrey | dispensaryId=4
+2026-01-26 08:44:30.608 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Monterrey |  dispensaryId: 4
+2026-01-26 08:44:48.672 -06:00 [INF] StationController | DbInfo | Start | Estacion:Queretaro
+2026-01-26 08:44:48.675 -06:00 [INF] StationController | DbInfo | Try | Estacion:Queretaro
+2026-01-26 08:44:53.902 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Queretaro | Result: dbctg | 172.26.201.100
+2026-01-26 08:44:53.968 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-01-26 08:44:53.971 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-01-26 08:44:54.137 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-01-26 08:44:57.315 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=4
+2026-01-26 08:44:57.318 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=4 
+2026-01-26 08:44:57.320 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 4
+2026-01-26 08:44:57.322 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 4
+2026-01-26 08:44:57.478 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Queretaro | Id=4 | count=3
+2026-01-26 08:45:02.541 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 4
+2026-01-26 08:45:06.844 -06:00 [INF] TransactionController | BySequence | Start | Station: Queretaro | Secuencia: 352132
+2026-01-26 08:45:06.848 -06:00 [INF] TransactionController| BySequence | Try | Station: Queretaro | Secuencia: 352132
+2026-01-26 08:45:06.996 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Queretaro | Secuencia: 352132
+2026-01-26 08:45:53.663 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=352132 | Gross=10000 | Neto=9993.4 | Temp=20.8
+2026-01-26 08:45:53.915 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=352132 | Gross=10000 | Neto=9993.4 | Temp=20.8
