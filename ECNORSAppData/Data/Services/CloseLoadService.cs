@@ -19,6 +19,7 @@ namespace ECNORSAppData.Services
         Task<TransactionDto?> GetTransactionBySequenceAsync(string station, long secuencia, CancellationToken ct = default);
         Task CloseManualAsync(string station, int secuenciaBuscar, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default);
         Task<decimal> GetNetVolAutoAsync(string station,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default);
+        Task<TransactionResp<bool>> UpdateTransactionBySequence(TransactionUpdateDto dto,CancellationToken ct = default);
     }
 
     public sealed class CloseLoadService : ICloseLoadService
@@ -203,8 +204,32 @@ namespace ECNORSAppData.Services
                 throw ex;
             }
         }
+        public async Task updateLoad(string station, int secuenciaBuscar, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default)
+        {
+            try
+            {
 
-       public async Task<decimal> GetNetVolAutoAsync(string station ,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default)
+                await using var db = CreateDb(station);
+
+                var pSec = new SqlParameter("@SecuenciaBuscar", secuenciaBuscar);
+                var pNeto = new SqlParameter("@VolumenNetoCT", volumenNetoCt);
+                var pTemp = new SqlParameter("@Temperatura", temperatura);
+
+                db.Database.SetCommandTimeout(10000);
+
+                await db.Database.ExecuteSqlRawAsync(
+                    "EXEC dbo.sp_Binnacle_CloseManual @SecuenciaBuscar, @VolumenNetoCT,@VolumenGROSS, @Temperatura",
+                    new object[] { pSec, pNeto, pTemp },
+                    ct);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public async Task<decimal> GetNetVolAutoAsync(string station ,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default)
         {
             await using var db = CreateDb(station);
 
@@ -229,7 +254,33 @@ namespace ECNORSAppData.Services
 
             return result;
         }
-       
+
+        public async Task<TransactionResp<bool>> UpdateTransactionBySequence(TransactionUpdateDto dto,CancellationToken ct = default)
+        {
+
+            try
+            {
+                await using var db = CreateDb(dto.Station);
+                var row = await db.Set<tblTransaccione>()
+                     .Where(x => x.intSecuencia == dto.Sequence)
+                     .ExecuteUpdateAsync(setters => setters
+                         .SetProperty(x => x.dblPrecioUnitario, dto.UnitPrice)
+                         .SetProperty(x => x.dblVolumen, dto.Volume)
+                         .SetProperty(x => x.dblImporte, dto.Amount),
+                         ct);
+
+                if (row == 0)
+                    return TransactionResp<bool>.Fail($"No se encontro transaccion #{dto.Sequence}");
+
+                return TransactionResp<bool>.Ok(true, "Se actualizo la transaccion correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return TransactionResp<bool>.Fail( $"Error al actualizar la transacción: {ex.Message}");
+            }
+        }
+
+
     }
 
 }
