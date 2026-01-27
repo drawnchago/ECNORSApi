@@ -94,7 +94,11 @@ namespace ECNORSAppData.Services
                 var query = db.tblBitacoras
                     .AsNoTracking()
                     .Where(b => b.datFechaHora.HasValue &&
-                                b.datFechaHora.Value >= fromDate);
+                                b.datFechaHora.Value >= fromDate &&
+
+                                !new[] { "CERRADA", "FUERA DE LINEA" }.Contains(b.strObservaciones)
+
+                );
 
                 if (dispensaryId != 0)
                 {
