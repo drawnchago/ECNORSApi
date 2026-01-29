@@ -3,6 +3,7 @@
 public class TransactionDto
 {
     public long id { get; set; }
+    public long TransactionId { get; set; }
     public DateTime? Date { get; set; }
     public double? Volume { get; set; }
     public double? Amount { get; set; }

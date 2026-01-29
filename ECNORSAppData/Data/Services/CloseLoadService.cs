@@ -156,6 +156,7 @@ namespace ECNORSAppData.Services
                 .Select(t => new TransactionDto
                 {
                     id = (int)t.intSecuencia,          // intSecuencia es long, tu dto id es int
+                    TransactionId = t.intTransaccion,
                     Date = t.datFechahora,
                     Volume = t.dblVolumen,
                     Amount = t.dblImporte,

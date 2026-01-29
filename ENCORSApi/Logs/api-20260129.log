@@ -1,0 +1,142 @@
+2026-01-29 11:55:31.779 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 11:55:31.826 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 11:55:41.693 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:03:27.415 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-29 12:03:27.417 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-29 12:03:32.625 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-29 12:03:32.835 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-29 12:03:32.837 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-29 12:03:33.058 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-29 12:03:36.454 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:03:36.455 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:03:36.456 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:03:36.457 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:03:36.657 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:03:41.637 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-01-29 12:04:57.774 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:04:57.775 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:04:57.777 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:04:57.779 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:04:57.846 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:04:57.901 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=5
+2026-01-29 12:05:09.123 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:05:09.125 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:05:09.197 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:08:15.429 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:08:15.429 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:08:15.431 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:08:15.432 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:08:15.487 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:08:15.564 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=5
+2026-01-29 12:08:17.717 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:08:17.718 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:08:17.812 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:08:42.313 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-29 12:08:42.315 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-29 12:08:42.317 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-29 12:08:42.382 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-29 12:08:42.384 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-29 12:08:42.504 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-29 12:08:45.224 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:08:45.228 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:08:45.326 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=5
+2026-01-29 12:08:45.345 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:08:45.347 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:08:45.423 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:08:46.612 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:08:46.615 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:08:46.700 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:09:43.256 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-29 12:09:43.258 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-29 12:09:43.260 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-29 12:09:43.320 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-29 12:09:43.322 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-29 12:09:43.409 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-29 12:09:50.252 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:09:50.255 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:09:50.285 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:09:50.289 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:09:50.350 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=5
+2026-01-29 12:09:50.361 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:09:53.028 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:09:53.029 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:09:53.131 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 362233
+2026-01-29 12:18:31.338 -06:00 [INF] StationController | DbInfo | Start | Estacion:Laboratorio
+2026-01-29 12:18:31.340 -06:00 [INF] StationController | DbInfo | Try | Estacion:Laboratorio
+2026-01-29 12:18:46.630 -06:00 [ERR] StationController | DbInfo | End(Err) | Estacion:Laboratorio
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 62
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 66
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 27
+2026-01-29 12:18:54.908 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-29 12:18:54.910 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-29 12:19:00.901 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-29 12:19:01.117 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-29 12:19:01.121 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-29 12:19:01.242 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-29 12:19:03.403 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:19:03.405 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:19:03.416 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:19:03.417 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:19:03.506 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-01-29 12:19:08.419 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:19:19.062 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 362231
+2026-01-29 12:19:19.063 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 362231
+2026-01-29 12:19:19.232 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 362231
+2026-01-29 12:19:22.047 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:19:22.052 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:19:22.049 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:19:22.055 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:19:22.130 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:19:22.179 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-01-29 12:20:58.969 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-01-29 12:20:58.970 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-01-29 12:20:58.972 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-01-29 12:20:59.031 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-01-29 12:20:59.033 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-01-29 12:20:59.118 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-01-29 12:21:01.135 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:21:01.136 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:21:01.144 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:21:01.146 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:21:01.223 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-01-29 12:21:01.225 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:21:02.371 -06:00 [INF] TransactionController | BySequence | Start | Station: Monterrey | Secuencia: 362231
+2026-01-29 12:21:02.374 -06:00 [INF] TransactionController| BySequence | Try | Station: Monterrey | Secuencia: 362231
+2026-01-29 12:21:02.487 -06:00 [WRN] TransactionController | BySequence | NotFound(ItemIsNull) | Station: Monterrey | Secuencia: 362231
+2026-01-29 12:22:36.420 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:22:36.422 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:22:36.520 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:22:36.534 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:22:36.535 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:22:36.632 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-01-29 12:22:51.930 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:22:51.932 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-01-29 12:22:51.957 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:22:51.958 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-01-29 12:22:52.064 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-01-29 12:22:52.084 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
