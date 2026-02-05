@@ -266,16 +266,28 @@ namespace ECNORSAppData.Services
             try
             {
                 await using var db = CreateDb(dto.Station);
-                var row = await db.Set<tblTransaccione>()
-                     .Where(x => x.intSecuencia == dto.Sequence)
-                     .ExecuteUpdateAsync(setters => setters
-                         .SetProperty(x => x.dblPrecioUnitario, dto.UnitPrice)
-                         .SetProperty(x => x.dblVolumen, dto.Volume)
-                         .SetProperty(x => x.dblImporte, dto.Amount),
-                         ct);
 
-                if (row == 0)
+                var transId = await db.Set<tblTransaccione>()
+                    .Where(x => x.intSecuencia == dto.Sequence)
+                    .Select(x => x.intID)
+                    .FirstOrDefaultAsync(ct);
+
+                if (transId == 0)
                     return TransactionResp<bool>.Fail($"No se encontro transaccion #{dto.Sequence}");
+
+                await db.Set<tblTransaccione>()
+                    .Where(x => x.intID == transId)
+                    .ExecuteUpdateAsync(setters => setters
+                        .SetProperty(x => x.dblPrecioUnitario, (double)dto.UnitPrice)
+                        .SetProperty(x => x.dblVolumen, (double)dto.Volume)
+                        .SetProperty(x => x.dblImporte, (double)dto.Amount),
+                        ct);
+
+                await db.Set<tblTransaccionesDetV2>()
+                    .Where(d => d.intTransaccion == transId)
+                    .ExecuteUpdateAsync(setters => setters
+                        .SetProperty(d => d.decImporte, (decimal)dto.Amount),
+                        ct);
 
                 return TransactionResp<bool>.Ok(true, "Se actualizo la transaccion correctamente.");
             }
