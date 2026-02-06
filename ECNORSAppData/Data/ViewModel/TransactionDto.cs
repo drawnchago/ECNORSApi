@@ -8,14 +8,16 @@ public class TransactionDto
     public double? Volume { get; set; }
     public double? Amount { get; set; }
     public double? UnitPrice { get; set; }
+    public string? strTotalizadorFinal { get; set; }
 }
 public sealed class TransactionUpdateDto
 {
-    public string Station { get; set; }
-    public long Sequence { get; set; }     
+    public long TransactionId { get; set; }
+    public string Station { get; set; }   
     public double UnitPrice { get; set; } 
     public double Volume { get; set; }
-    public double Amount { get; set; } 
+    public double Amount { get; set; }
+    public string? strTotalizadorFinal { get; set; }
 }
 public sealed  class TransactionResp<T>
 {

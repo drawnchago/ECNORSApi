@@ -160,7 +160,8 @@ namespace ECNORSAppData.Services
                     Date = t.datFechahora,
                     Volume = t.dblVolumen,
                     Amount = t.dblImporte,
-                    UnitPrice = t.dblPrecioUnitario
+                    UnitPrice = t.dblPrecioUnitario,
+                    strTotalizadorFinal = t.strTotalizadorFinal
                 })
                 .ToListAsync(ct);
 
@@ -260,40 +261,44 @@ namespace ECNORSAppData.Services
             return result;
         }
 
-        public async Task<TransactionResp<bool>> UpdateTransactionBySequence(TransactionUpdateDto dto,CancellationToken ct = default)
+        public async Task<TransactionResp<bool>> UpdateTransactionBySequence(TransactionUpdateDto dto, CancellationToken ct = default)
         {
-
             try
             {
                 await using var db = CreateDb(dto.Station);
 
-                var transId = await db.Set<tblTransaccione>()
-                    .Where(x => x.intSecuencia == dto.Sequence)
-                    .Select(x => x.intID)
-                    .FirstOrDefaultAsync(ct);
+                _log.LogWarning("Station={Station} | TransactionId={TransactionId} | TotalizadorFinal={TotalizadorFinal}", dto.Station, dto.TransactionId, dto.strTotalizadorFinal);
 
-                if (transId == 0)
-                    return TransactionResp<bool>.Fail($"No se encontro transaccion #{dto.Sequence}");
-
-                await db.Set<tblTransaccione>()
-                    .Where(x => x.intID == transId)
+                var rowsMain = await db.Set<tblTransaccione>()
+                    .Where(x => x.intTransaccion == dto.TransactionId)
                     .ExecuteUpdateAsync(setters => setters
-                        .SetProperty(x => x.dblPrecioUnitario, (double)dto.UnitPrice)
-                        .SetProperty(x => x.dblVolumen, (double)dto.Volume)
-                        .SetProperty(x => x.dblImporte, (double)dto.Amount),
+                        .SetProperty(x => x.dblPrecioUnitario, dto.UnitPrice)
+                        .SetProperty(x => x.dblVolumen, dto.Volume)
+                        .SetProperty(x => x.dblImporte, dto.Amount)
+                        .SetProperty(x => x.strTotalizadorFinal, dto.strTotalizadorFinal),
                         ct);
 
-                await db.Set<tblTransaccionesDetV2>()
-                    .Where(d => d.intTransaccion == transId)
-                    .ExecuteUpdateAsync(setters => setters
-                        .SetProperty(d => d.decImporte, (decimal)dto.Amount),
-                        ct);
+                if (rowsMain == 0)
+                    return TransactionResp<bool>.Fail($"No se encontró la transacción #{dto.TransactionId} para actualizar.");
 
-                return TransactionResp<bool>.Ok(true, "Se actualizo la transaccion correctamente.");
+                var hasV2 = await db.Set<tblTransaccionesDetV2>()
+                    .AnyAsync(x => x.intTransaccion == dto.TransactionId, ct);
+
+                if (hasV2)
+                {
+                    await db.Set<tblTransaccionesDetV2>()
+                        .Where(d => d.intTransaccion == dto.TransactionId)
+                        .ExecuteUpdateAsync(setters => setters
+                            .SetProperty(d => d.decImporte, (decimal)dto.Amount),
+                            ct);
+                }
+
+                return TransactionResp<bool>.Ok(true, "Se actualizó la transacción correctamente.");
             }
             catch (Exception ex)
             {
-                return TransactionResp<bool>.Fail( $"Error al actualizar la transacción: {ex.Message}");
+                _log.LogError(ex, "Error actualizando transacción {TransactionId} en station {Station}", dto.TransactionId, dto.Station);
+                return TransactionResp<bool>.Fail($"Error al actualizar la transacción: {ex.Message}");
             }
         }
 

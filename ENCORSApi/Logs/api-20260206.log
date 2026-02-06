@@ -1,0 +1,132 @@
+2026-02-06 08:08:53.910 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=0
+2026-02-06 08:08:54.567 -06:00 [WRN] Station=Monterrey | Sequence=358975 | TotalizadorFInal=0
+2026-02-06 08:09:03.765 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:10:26.580 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=0
+2026-02-06 08:10:26.600 -06:00 [WRN] Station=Monterrey | Sequence=358975 | TotalizadorFInal=0
+2026-02-06 08:10:26.897 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:21:16.207 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=06
+2026-02-06 08:21:16.759 -06:00 [WRN] Station=Monterrey | Sequence=358975 | TotalizadorFInal=06
+2026-02-06 08:21:28.206 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:21:31.444 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=6
+2026-02-06 08:21:31.458 -06:00 [WRN] Station=Monterrey | Sequence=358975 | TotalizadorFInal=6
+2026-02-06 08:21:31.752 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:21:47.522 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=6
+2026-02-06 08:21:47.532 -06:00 [WRN] Station=Monterrey | Sequence=358975 | TotalizadorFInal=6
+2026-02-06 08:21:47.799 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:22:39.247 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=1
+2026-02-06 08:22:39.252 -06:00 [WRN] Station=Monterrey | Sequence=358975 | TotalizadorFInal=1
+2026-02-06 08:22:39.501 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:25:24.160 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998707 | Volume=20064 | Amount=20064 | TotalizadorFInal=1
+2026-02-06 08:25:24.170 -06:00 [WRN] Station=Monterrey | Sequence=358975 | TotalizadorFInal=1
+2026-02-06 08:25:24.378 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:30:15.505 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=362577 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=5
+2026-02-06 08:30:16.017 -06:00 [WRN] Station=Monterrey | TransactionId=362577 | TotalizadorFinal=5
+2026-02-06 08:30:24.264 -06:00 [WRN] TransactionController| UpdateTransactionBySequence | BusinessFail | Station=Monterrey | Sequence=362577 | TotalizadorFInal={strTotalizadorFinal | Msg={Msg}
+2026-02-06 08:30:46.392 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=362577 | Price=18.998707 | Volume=20064 | Amount=20064 | TotalizadorFInal=5
+2026-02-06 08:30:46.407 -06:00 [WRN] Station=Monterrey | TransactionId=362577 | TotalizadorFinal=5
+2026-02-06 08:30:46.607 -06:00 [WRN] TransactionController| UpdateTransactionBySequence | BusinessFail | Station=Monterrey | Sequence=362577 | TotalizadorFInal={strTotalizadorFinal | Msg={Msg}
+2026-02-06 08:31:05.971 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998707 | Volume=20064 | Amount=20064 | TotalizadorFInal=5
+2026-02-06 08:31:05.977 -06:00 [WRN] Station=Monterrey | TransactionId=358975 | TotalizadorFinal=5
+2026-02-06 08:31:06.131 -06:00 [WRN] TransactionController| UpdateTransactionBySequence | BusinessFail | Station=Monterrey | Sequence=358975 | TotalizadorFInal={strTotalizadorFinal | Msg={Msg}
+2026-02-06 08:31:26.458 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998707 | Volume=20064 | Amount=20064 | TotalizadorFInal=5
+2026-02-06 08:31:26.463 -06:00 [WRN] Station=Monterrey | TransactionId=358975 | TotalizadorFinal=5
+2026-02-06 08:31:26.721 -06:00 [WRN] TransactionController| UpdateTransactionBySequence | BusinessFail | Station=Monterrey | Sequence=358975 | TotalizadorFInal={strTotalizadorFinal | Msg={Msg}
+2026-02-06 08:34:22.344 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998707 | Volume=20064 | Amount=20064 | TotalizadorFInal=5
+2026-02-06 08:34:22.874 -06:00 [WRN] Station=Monterrey | TransactionId=358975 | TotalizadorFinal=5
+2026-02-06 08:34:31.596 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:35:44.813 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=8
+2026-02-06 08:35:44.826 -06:00 [WRN] Station=Monterrey | TransactionId=358975 | TotalizadorFinal=8
+2026-02-06 08:35:45.128 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:35:53.158 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=
+2026-02-06 08:35:53.163 -06:00 [WRN] Station=Monterrey | TransactionId=358975 | TotalizadorFinal=
+2026-02-06 08:35:53.386 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:36:01.839 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=0
+2026-02-06 08:36:01.844 -06:00 [WRN] Station=Monterrey | TransactionId=358975 | TotalizadorFinal=0
+2026-02-06 08:36:01.999 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:36:04.905 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358975 | Price=18.998708 | Volume=20065 | Amount=20065 | TotalizadorFInal=0
+2026-02-06 08:36:04.910 -06:00 [WRN] Station=Monterrey | TransactionId=358975 | TotalizadorFinal=0
+2026-02-06 08:36:05.179 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358975
+2026-02-06 08:40:15.483 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-02-06 08:40:15.485 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-02-06 08:40:15.503 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-02-06 08:40:15.590 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-02-06 08:40:15.592 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-02-06 08:40:15.755 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-02-06 08:40:19.043 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 08:40:19.045 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 08:40:19.394 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=3
+2026-02-06 08:40:19.433 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:40:19.437 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:40:19.531 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:41:35.963 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 08:41:35.964 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:41:35.965 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 08:41:35.966 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:41:36.066 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=3
+2026-02-06 08:41:41.039 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:42:30.050 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:42:30.050 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 08:42:30.052 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:42:30.053 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 08:42:30.147 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 08:42:30.181 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=3
+2026-02-06 09:04:25.500 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-02-06 09:04:25.501 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-02-06 09:04:30.387 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-02-06 09:04:30.569 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-02-06 09:04:30.571 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-02-06 09:04:38.681 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-02-06 09:04:41.362 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 09:04:41.364 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 09:04:41.398 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:04:41.400 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:04:41.493 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=3
+2026-02-06 09:04:46.507 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:05:12.053 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 09:05:12.085 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:05:12.086 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 09:05:12.087 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:05:12.174 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:05:12.227 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=3
+2026-02-06 09:05:38.119 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=362616 | Price=21 | Volume=31085 | Amount=31085 | TotalizadorFInal=3
+2026-02-06 09:05:38.126 -06:00 [WRN] Station=Monterrey | TransactionId=362616 | TotalizadorFinal=3
+2026-02-06 09:05:38.210 -06:00 [WRN] TransactionController| UpdateTransactionBySequence | BusinessFail | Station=Monterrey | Sequence=362616 | TotalizadorFInal={strTotalizadorFinal | Msg={Msg}
+2026-02-06 09:06:54.788 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=362616 | Price=21 | Volume=31085 | Amount=31085 | TotalizadorFInal=3
+2026-02-06 09:06:54.793 -06:00 [WRN] Station=Monterrey | TransactionId=362616 | TotalizadorFinal=3
+2026-02-06 09:06:54.962 -06:00 [WRN] TransactionController| UpdateTransactionBySequence | BusinessFail | Station=Monterrey | Sequence=362616 | TotalizadorFInal={strTotalizadorFinal | Msg={Msg}
+2026-02-06 09:11:06.801 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 09:11:06.801 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:11:06.807 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 09:11:06.808 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:11:11.920 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-02-06 09:11:16.846 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:12:11.481 -06:00 [INF] StationController | DbInfo | Start | Estacion:Monterrey
+2026-02-06 09:12:11.483 -06:00 [INF] StationController | DbInfo | Try | Estacion:Monterrey
+2026-02-06 09:12:11.486 -06:00 [INF] StationController | DbInfo | End(Ok) | Estacion:Monterrey | Result: dbctg | 172.26.200.100
+2026-02-06 09:12:11.545 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-02-06 09:12:11.547 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-02-06 09:12:11.668 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-02-06 09:12:13.519 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 09:12:13.522 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 09:12:13.565 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:12:13.567 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:12:13.649 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-02-06 09:12:13.755 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:12:22.666 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:12:22.667 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 09:12:22.669 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:12:22.672 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 09:12:22.800 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-02-06 09:12:22.805 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:12:54.314 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358995 | Price=21 | Volume=31085 | Amount=31085 | TotalizadorFInal=3
+2026-02-06 09:12:54.317 -06:00 [WRN] Station=Monterrey | TransactionId=358995 | TotalizadorFinal=3
+2026-02-06 09:12:54.560 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358995
+2026-02-06 09:13:12.094 -06:00 [INF] TransactionController| UpdateTransactionBySequence | Start | Station=Monterrey | Sequence=358995 | Price=22 | Volume=31086 | Amount=31086 | TotalizadorFInal=0
+2026-02-06 09:13:12.097 -06:00 [WRN] Station=Monterrey | TransactionId=358995 | TotalizadorFinal=0
+2026-02-06 09:13:12.288 -06:00 [INF] TransactionController| UpdateTransactionBySequence | End(Ok) | Station=Monterrey | Sequence=358995
+2026-02-06 09:13:16.437 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:13:16.444 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1
+2026-02-06 09:13:16.445 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 1
+2026-02-06 09:13:16.446 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 
+2026-02-06 09:13:16.561 -06:00 [INF] BinnacleController | Top | End(Ok) | Estacion=Monterrey | Id=1 | count=4
+2026-02-06 09:13:16.590 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 1

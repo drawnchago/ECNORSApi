@@ -96,33 +96,33 @@ public sealed class TransactionController : ControllerBase
     {
         if (req is null)return BadRequest(new { Success = false, Message = "Body requerido." });
         if (string.IsNullOrWhiteSpace(req.Station))return BadRequest(new { Success = false, Message = "Estacion es requerida." });
-        if (req.Sequence <= 0)return BadRequest(new { Success = false, Message = "Secuencia es inválida." });
+        if (req.TransactionId <= 0)return BadRequest(new { Success = false, Message = "Transaccion es inválida." });
 
         try
         {
-            _log.LogInformation("TransactionController| UpdateTransactionBySequence | Start | Station={Station} | Sequence={Sequence} | Price={Price} | Volume={Volume} | Amount={Amount}", req.Station, req.Sequence, req.UnitPrice, req.Volume, req.Amount);
+            _log.LogInformation("TransactionController| UpdateTransactionBySequence | Start | Station={Station} | Sequence={Sequence} | Price={Price} | Volume={Volume} | Amount={Amount} | TotalizadorFInal={strTotalizadorFinal}", req.Station, req.TransactionId, req.UnitPrice, req.Volume, req.Amount, req.strTotalizadorFinal);
 
             var result = await _svc.UpdateTransactionBySequence(req, ct);
 
             if (!result.Success)
             {
-                _log.LogWarning("TransactionController| UpdateTransactionBySequence | BusinessFail | Station={Station} | Sequence={Sequence} | Msg={Msg}", req.Station, req.Sequence, result.Message);
+                _log.LogWarning("TransactionController| UpdateTransactionBySequence | BusinessFail | Station={Station} | Sequence={Sequence} | TotalizadorFInal={strTotalizadorFinal | Msg={Msg}", req.Station, req.TransactionId, req.strTotalizadorFinal, result.Message);
 
                 return BadRequest(new { Success = false, Message = result.Message });
             }
 
-            _log.LogInformation("TransactionController| UpdateTransactionBySequence | End(Ok) | Station={Station} | Sequence={Sequence}", req.Station, req.Sequence);
+            _log.LogInformation("TransactionController| UpdateTransactionBySequence | End(Ok) | Station={Station} | Sequence={Sequence}", req.Station, req.TransactionId);
 
             return Ok(new { Success = true, Message = result.Message });
         }
         catch (OperationCanceledException)
         {
-            _log.LogWarning("TransactionController| UpdateTransactionBySequence | Canceled | Station={Station} | Sequence={Sequence}", req.Station, req.Sequence);
+            _log.LogWarning("TransactionController| UpdateTransactionBySequence | Canceled | Station={Station} | Sequence={Sequence}", req.Station, req.TransactionId);
              return StatusCode(499, new { Success = false, Message = "Solicitud cancelada." });
         }
         catch (Exception ex)
         {
-            _log.LogError(ex, "TransactionController| UpdateTransactionBySequence | End(Err) | Station={Station} | Sequence={Sequence}", req.Station, req.Sequence);
+            _log.LogError(ex, "TransactionController| UpdateTransactionBySequence | End(Err) | Station={Station} | Sequence={Sequence}", req.Station, req.TransactionId);
             return StatusCode(500, new { Success = false, Message = "Error al actualizar la transacción." });
         }
     }
