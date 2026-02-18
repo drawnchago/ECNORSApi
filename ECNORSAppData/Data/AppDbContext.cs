@@ -11,6 +11,7 @@ public partial class AppDbContext : DbContext
         : base(options)
     {
     }
+    public virtual DbSet<tblDocumentacion> tblDocumentacion { get; set; }
 
     public virtual DbSet<AUX_RecepcionesDet> AUX_RecepcionesDets { get; set; }
 
