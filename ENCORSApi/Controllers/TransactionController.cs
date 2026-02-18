@@ -1,5 +1,6 @@
 using ECNORSAppData.Data.DTO;
 using ECNORSAppData.Services;
+using ENCORSApi.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -19,7 +20,7 @@ public sealed class TransactionController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Top([FromQuery] string station,int dispensaryId,CancellationToken ct)
+    public async Task<IActionResult> Top([FromQuery] string station, int dispensaryId, CancellationToken ct)
     {
         _log.LogInformation("TransactionController | Top |  Start | Estacion: {station} |  dispensaryId: {DispensaryId}", station, dispensaryId);
 
@@ -32,7 +33,7 @@ public sealed class TransactionController : ControllerBase
         try
         {
             _log.LogInformation("TransactionController | Top |  Try | Estacion: {station} |  dispensaryId: {DispensaryId}", station, dispensaryId);
-            var list = await _svc.GetTransactionsTopAsync(station,dispensaryId, ct);
+            var list = await _svc.GetTransactionsTopAsync(station, dispensaryId, ct);
 
             if (list is null || list.Count == 0)
             {
@@ -43,7 +44,8 @@ public sealed class TransactionController : ControllerBase
             _log.LogInformation("TransactionController | Top |  End(Ok) | Estacion: {station} |  dispensaryId: {DispensaryId}", station, dispensaryId);
             return Ok(new { Success = true, Message = "Transacciones obtenidas correctamente", Data = list });
 
-        }catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             _log.LogError(ex, "TransactionController | Top |  End(Err) | Estacion: {station} |  dispensaryId: {DispensaryId}", station, dispensaryId);
             return StatusCode(500, "Error al obtener transacciones");
@@ -55,20 +57,20 @@ public sealed class TransactionController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> BySequence(string station,long secuencia,CancellationToken ct)
+    public async Task<IActionResult> BySequence(string station, long secuencia, CancellationToken ct)
     {
         _log.LogInformation("TransactionController | BySequence | Start | Station: {station} | Secuencia: {Secuencia}", station, secuencia);
 
         if (secuencia <= 0)
         {
-            _log.LogWarning("TransactionController | BySequence | BadRequest(secuencia) | Station: {station} | Secuencia: {Secuencia}", station,secuencia);
+            _log.LogWarning("TransactionController | BySequence | BadRequest(secuencia) | Station: {station} | Secuencia: {Secuencia}", station, secuencia);
             return BadRequest(new { Success = false, Message = "La secuencia debe ser diferente de cero." });
         }
 
         try
         {
             _log.LogInformation("TransactionController| BySequence | Try | Station: {station} | Secuencia: {Secuencia}", station, secuencia);
-            var item = await _svc.GetTransactionBySequenceAsync(station,secuencia, ct);
+            var item = await _svc.GetTransactionBySequenceAsync(station, secuencia, ct);
 
             if (item is null)
             {
@@ -79,7 +81,8 @@ public sealed class TransactionController : ControllerBase
             _log.LogInformation("TransactionController | BySequence | End(Ok) | Station: {station} | Secuencia: {Secuencia}", station, secuencia);
             return Ok(item);
 
-        }catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             _log.LogError(ex, "TransactionController | BySequence | End(Err) | Station: {station} | Secuencia: {Secuencia}", station, secuencia);
             return StatusCode(500, "Error al obtener transacción por secuencia");
@@ -92,11 +95,11 @@ public sealed class TransactionController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> UpdateTransactionBySequence([FromBody] TransactionUpdateDto req,CancellationToken ct)
+    public async Task<IActionResult> UpdateTransactionBySequence([FromBody] TransactionUpdateDto req, CancellationToken ct)
     {
-        if (req is null)return BadRequest(new { Success = false, Message = "Body requerido." });
-        if (string.IsNullOrWhiteSpace(req.Station))return BadRequest(new { Success = false, Message = "Estacion es requerida." });
-        if (req.TransactionId <= 0)return BadRequest(new { Success = false, Message = "Transaccion es inválida." });
+        if (req is null) return BadRequest(new { Success = false, Message = "Body requerido." });
+        if (string.IsNullOrWhiteSpace(req.Station)) return BadRequest(new { Success = false, Message = "Estacion es requerida." });
+        if (req.TransactionId <= 0) return BadRequest(new { Success = false, Message = "Transaccion es inválida." });
 
         try
         {
@@ -118,7 +121,7 @@ public sealed class TransactionController : ControllerBase
         catch (OperationCanceledException)
         {
             _log.LogWarning("TransactionController| UpdateTransactionBySequence | Canceled | Station={Station} | Sequence={Sequence}", req.Station, req.TransactionId);
-             return StatusCode(499, new { Success = false, Message = "Solicitud cancelada." });
+            return StatusCode(499, new { Success = false, Message = "Solicitud cancelada." });
         }
         catch (Exception ex)
         {
@@ -126,6 +129,45 @@ public sealed class TransactionController : ControllerBase
             return StatusCode(500, new { Success = false, Message = "Error al actualizar la transacción." });
         }
     }
+    [HttpPost("closeForced")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> CloseForce([FromBody] CloseForceRequest req, CancellationToken ct)
+    {
+        if (req is null)
+            return BadRequest(new { Success = false, Message = "Body requerido." });
 
+        if (string.IsNullOrWhiteSpace(req.Station))
+            return BadRequest(new { Success = false, Message = "Estacion es requerida." });
 
+        if (req.IdSec <= 0)
+            return BadRequest(new { Success = false, Message = "Secuencia es inválida." });
+
+        try
+        {
+            _log.LogInformation("CloseLoadController| CloseForce | Start | Station={Station} | IdSec={IdSec}",req.Station,req.IdSec);
+            var result = await _svc.CloseForcedAsync(req.Station, req.IdSec, ct);
+
+            if (!result.Success)
+            {
+                _log.LogWarning("CloseLoadController| CloseForce | BusinessFail | Station={Station} | IdSec={IdSec} | Msg={Msg}",req.Station,+req.IdSec,result.Message);
+                return BadRequest(new { Success = false, Message = result.Message });
+            }
+
+            _log.LogInformation("CloseLoadController| CloseForce | End(Ok) | Station={Station} | IdSec={IdSec}",req.Station,req.IdSec);
+            return Ok(new { Success = true, Message = result.Message });
+        }
+        catch (OperationCanceledException)
+        {
+            _log.LogWarning( "CloseLoadController| CloseForce | Canceled | Station={Station} | IdSec={IdSec}", req.Station, req.IdSec);
+            return StatusCode(499, new { Success = false, Message = "Solicitud cancelada." });
+        }
+        catch (Exception ex)
+        {
+            _log.LogError( ex, "CloseLoadController| CloseForce | End(Err) | Station={Station} | IdSec={IdSec}", req.Station, req.IdSec);
+            return StatusCode(500, new { Success = false, Message = "Error al ejecutar el cierre forzado." });
+        }
+    }
 }

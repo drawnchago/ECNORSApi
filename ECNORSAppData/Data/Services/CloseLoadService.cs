@@ -20,6 +20,8 @@ namespace ECNORSAppData.Services
         Task CloseManualAsync(string station, int secuenciaBuscar, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default);
         Task<decimal> GetNetVolAutoAsync(string station,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default);
         Task<TransactionResp<bool>> UpdateTransactionBySequence(TransactionUpdateDto dto,CancellationToken ct = default);
+        Task<TransactionResp<bool>> CloseForcedAsync(string station,int idSec,CancellationToken ct = default);
+
     }
 
     public sealed class CloseLoadService : ICloseLoadService
@@ -51,7 +53,7 @@ namespace ECNORSAppData.Services
             return new AppDbContext(options);
         }
 
-        public async Task<string> GetDbInfoAsync(string station,CancellationToken ct = default)
+        public async Task<string> GetDbInfoAsync(string station, CancellationToken ct = default)
         {
             try
             {
@@ -85,54 +87,54 @@ namespace ECNORSAppData.Services
 
             return list;
         }
-        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station, int dispensaryId,CancellationToken ct = default)
+        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station, int dispensaryId, CancellationToken ct = default)
         {
-                await using var db = CreateDb(station);
-                var conn = db.Database.GetDbConnection();
-                var fromDate = DateTime.Now.AddHours(-24);
+            await using var db = CreateDb(station);
+            var conn = db.Database.GetDbConnection();
+            var fromDate = DateTime.Now.AddHours(-24);
 
-                var query = db.tblBitacoras
-                    .AsNoTracking()
-                    .Where(b => b.datFechaHora.HasValue &&
-                                b.datFechaHora.Value >= fromDate &&
+            var query = db.tblBitacoras
+                .AsNoTracking()
+                .Where(b => b.datFechaHora.HasValue &&
+                            b.datFechaHora.Value >= fromDate &&
 
-                                !new[] { "CERRADA", "FUERA DE LINEA" }.Contains(b.strObservaciones)
+                            !new[] { "CERRADA", "FUERA DE LINEA" }.Contains(b.strObservaciones)
 
-                );
+            );
 
-                if (dispensaryId != 0)
+            if (dispensaryId != 0)
+            {
+                query = query.Where(b =>
+                    b.intDispensario.HasValue &&
+                    b.intDispensario.Value == dispensaryId);
+            }
+
+            var list = await query
+                .OrderByDescending(b => b.intSecuencia)
+                .Take(7)
+                .Select(b => new BinnacleDto
                 {
-                    query = query.Where(b =>
-                        b.intDispensario.HasValue &&
-                        b.intDispensario.Value == dispensaryId);
-                }
+                    id = b.intSecuencia,
+                    Date = b.datFechaHora,
 
-                var list = await query
-                    .OrderByDescending(b => b.intSecuencia)
-                    .Take(7)
-                    .Select(b => new BinnacleDto
-                    {
-                        id = b.intSecuencia,
-                        Date = b.datFechaHora,
+                    Observations = b.strObservaciones,
+                    Scheduled = (double?)b.dblProgramado,
+                    Sold = (double?)b.dblVendido,
+                    SoldVolume = (double?)b.dblVolumenVendido,
+                    UnitPrice = (double?)b.dblPrecioUnitario,
+                    Closed = b.bitCerrada,
 
-                        Observations = b.strObservaciones,
-                        Scheduled = (double?)b.dblProgramado,
-                        Sold = (double?)b.dblVendido,
-                        SoldVolume = (double?)b.dblVolumenVendido,
-                        UnitPrice = (double?)b.dblPrecioUnitario,
-                        Closed = b.bitCerrada,
+                    DispensaryId = b.intDispensario,
+                    HoseId = b.intManguera,
+                    ProductId = b.intProducto,
 
-                        DispensaryId = b.intDispensario,
-                        HoseId = b.intManguera,
-                        ProductId = b.intProducto,
+                    Totalizator = b.strTotalizador,
+                    OriginTotalizator = b.strTotalizadorOriginal,
+                    EndTotalizator = b.strTotalizadorFinalOriginal
+                })
+                .ToListAsync(ct);
 
-                        Totalizator = b.strTotalizador,
-                        OriginTotalizator = b.strTotalizadorOriginal,
-                        EndTotalizator = b.strTotalizadorFinalOriginal
-                    })
-                    .ToListAsync(ct);
-
-                return list;
+            return list;
         }
 
 
@@ -176,7 +178,7 @@ namespace ECNORSAppData.Services
                 .Where(t => t.intSecuencia == secuencia)
                 .Select(t => new TransactionDto
                 {
-                    id = t.intID,                
+                    id = t.intID,
                     Date = t.datFechahora,
                     Volume = t.dblVolumen,
                     Amount = t.dblImporte,
@@ -185,24 +187,24 @@ namespace ECNORSAppData.Services
                 .FirstOrDefaultAsync(ct);
         }
 
-        public async Task CloseManualAsync(string station, int secuenciaBuscar,decimal volumenGross,decimal volumenNetoCt,decimal temperatura,CancellationToken ct = default)
+        public async Task CloseManualAsync(string station, int secuenciaBuscar, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default)
         {
             try
             {
 
-            await using var db = CreateDb(station);
+                await using var db = CreateDb(station);
 
-            var pSec = new SqlParameter("@SecuenciaBuscar", secuenciaBuscar);
-            var pGross = new SqlParameter("@VolumenGROSS", volumenGross);
-            var pNeto = new SqlParameter("@VolumenNetoCT", volumenNetoCt);
-            var pTemp = new SqlParameter("@Temperatura", temperatura);
+                var pSec = new SqlParameter("@SecuenciaBuscar", secuenciaBuscar);
+                var pGross = new SqlParameter("@VolumenGROSS", volumenGross);
+                var pNeto = new SqlParameter("@VolumenNetoCT", volumenNetoCt);
+                var pTemp = new SqlParameter("@Temperatura", temperatura);
 
-            db.Database.SetCommandTimeout(10000);
+                db.Database.SetCommandTimeout(10000);
 
-            await db.Database.ExecuteSqlRawAsync(
-                "EXEC dbo.sp_Binnacle_CloseManual @SecuenciaBuscar, @VolumenNetoCT,@VolumenGROSS, @Temperatura",
-                new object[] { pSec, pNeto, pGross, pTemp },
-                ct);
+                await db.Database.ExecuteSqlRawAsync(
+                    "EXEC dbo.sp_Binnacle_CloseManual @SecuenciaBuscar, @VolumenNetoCT,@VolumenGROSS, @Temperatura",
+                    new object[] { pSec, pNeto, pGross, pTemp },
+                    ct);
             }
             catch (Exception ex)
             {
@@ -235,7 +237,7 @@ namespace ECNORSAppData.Services
             }
         }
 
-        public async Task<decimal> GetNetVolAutoAsync(string station ,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default)
+        public async Task<decimal> GetNetVolAutoAsync(string station, int intDispensario, int intProducto, decimal temperatura, decimal volumenGross, CancellationToken ct = default)
         {
             await using var db = CreateDb(station);
 
@@ -301,8 +303,23 @@ namespace ECNORSAppData.Services
                 return TransactionResp<bool>.Fail($"Error al actualizar la transacción: {ex.Message}");
             }
         }
+        public async Task<TransactionResp<bool>> CloseForcedAsync(string station, int idSec, CancellationToken ct = default)
+        {
+            try
+            {
+                await using var db = CreateDb(station);
+                var pIdSec = new SqlParameter("@IdSec", idSec);
 
+                db.Database.SetCommandTimeout(10000);
 
+                await db.Database.ExecuteSqlInterpolatedAsync($"EXEC dbo.CierreForzadoDeCarga @IdSec={idSec}",ct );
+                return TransactionResp<bool>.Ok(true, "Cierre forzado ejecutado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex,"Error ejecutando CierreForzadoDeCarga | Station={Station} | IdSec={IdSec}",station,idSec);
+                return TransactionResp<bool>.Fail("No se actualizó la transacción correctamente.");
+            }
+        }
     }
-
 }

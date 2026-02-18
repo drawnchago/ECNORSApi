@@ -1,4 +1,6 @@
+using ECNORSAppData.Data.DTO;
 using ECNORSAppData.Services;
+using ENCORSApi.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ENCORSApi.Controllers;
@@ -46,6 +48,4 @@ public sealed class StationController : ControllerBase
             return StatusCode(500, new { Success = false, Message = "Error interno al validar conexión con la base de datos." });
         }
     }
-
-
 }
