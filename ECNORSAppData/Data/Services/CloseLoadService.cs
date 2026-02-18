@@ -41,14 +41,8 @@ namespace ECNORSAppData.Services
         {
             var all = _selector.GetConnections();
             var item = all.FirstOrDefault(x => x.name == station) ?? all.FirstOrDefault();
-
-            var cs = item is not null
-                ? _selector.BuildConnectionString(item)
-                : throw new InvalidOperationException("No hay conexión seleccionada.");
-
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer(cs)
-                .Options;
+            var cs = item is not null ? _selector.BuildConnectionString(item) : throw new InvalidOperationException("No hay conexión seleccionada.");
+            var options = new DbContextOptionsBuilder<AppDbContext>().UseSqlServer(cs).Options;
 
             return new AppDbContext(options);
         }
@@ -65,14 +59,11 @@ namespace ECNORSAppData.Services
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException(
-                    "Error al validar conexión con la base de datos.",
-                    ex);
+                throw new InvalidOperationException("Error al validar conexión con la base de datos.",ex);
             }
         }
         public async Task<List<DispensaryDto>> GetDispensariosAsync(string station, CancellationToken ct)
         {
-
             await using var db = CreateDb(station);
             var conn = db.Database.GetDbConnection();
 
@@ -143,12 +134,8 @@ namespace ECNORSAppData.Services
             await using var db = CreateDb(station);
 
             var fromDate = DateTime.Today.AddDays(-1);
+            var query = db.tblTransacciones.AsNoTracking().Where(t => t.datFechahora >= fromDate);
 
-            var query = db.tblTransacciones
-                .AsNoTracking()
-                .Where(t => t.datFechahora >= fromDate);
-
-            // si quieres permitir 0 = todos
             if (dispensaryId != 0)
                 query = query.Where(t => t.intDispensario == dispensaryId);
 
@@ -157,7 +144,7 @@ namespace ECNORSAppData.Services
                 .Take(7)
                 .Select(t => new TransactionDto
                 {
-                    id = (int)t.intSecuencia,          // intSecuencia es long, tu dto id es int
+                    id = (int)t.intSecuencia,
                     TransactionId = t.intTransaccion,
                     Date = t.datFechahora,
                     Volume = t.dblVolumen,
@@ -191,7 +178,6 @@ namespace ECNORSAppData.Services
         {
             try
             {
-
                 await using var db = CreateDb(station);
 
                 var pSec = new SqlParameter("@SecuenciaBuscar", secuenciaBuscar);
@@ -283,8 +269,7 @@ namespace ECNORSAppData.Services
                 if (rowsMain == 0)
                     return TransactionResp<bool>.Fail($"No se encontró la transacción #{dto.TransactionId} para actualizar.");
 
-                var hasV2 = await db.Set<tblTransaccionesDetV2>()
-                    .AnyAsync(x => x.intTransaccion == dto.TransactionId, ct);
+                var hasV2 = await db.Set<tblTransaccionesDetV2>().AnyAsync(x => x.intTransaccion == dto.TransactionId, ct);
 
                 if (hasV2)
                 {

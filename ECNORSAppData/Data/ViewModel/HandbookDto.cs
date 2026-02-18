@@ -8,6 +8,7 @@ public sealed record HandbookDto(
     string OriginalName,
     string ContentType,
     long SizeBytes,
+    string RelativePath,
     DateTime CreatedAtUtc
 );
 public sealed class HandbookUpload

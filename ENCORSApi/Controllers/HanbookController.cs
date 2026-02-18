@@ -45,6 +45,7 @@ public sealed class HandbookController : ControllerBase
                     x.OriginalName,
                     x.ContentType,
                     x.SizeBytes,
+                    x.RelativePath,
                     x.CreatedAtUtc
                 ))
                 .ToListAsync(ct);
@@ -178,6 +179,49 @@ public sealed class HandbookController : ControllerBase
         {
             _log.LogError(ex, "HandbookController | View | Error");
             return StatusCode(500, new { Success = false, Message = "Error al visualizar archivo" });
+        }
+    }
+    [HttpDelete("{id:long}")]
+    public async Task<IActionResult> Delete(long id, CancellationToken ct)
+    {
+        _log.LogInformation("HandbookController | Delete | Id={Id}", id);
+
+        try
+        {
+            await using var db = CreateDb();
+            var doc = await db.tblDocumentacion.FirstOrDefaultAsync(x => x.Id == id, ct);
+
+            if (doc is null)
+                return NotFound(new { succes = false, message = "Documento no encontrado en la base de datos" });
+
+            var physicalPath = Path.Combine(_env.ContentRootPath,doc.RelativePath.Replace("/", Path.DirectorySeparatorChar.ToString()),doc.StoredFileName);
+
+            try
+            {
+                if (System.IO.File.Exists(physicalPath))
+                {
+                    System.IO.File.Delete(physicalPath);
+                }
+                else
+                {
+                    _log.LogWarning("HandbookController | Delete | Archivo físico no encontrado en ruta: {Path}", physicalPath);
+                }
+            }
+            catch (IOException ioEx)
+            {
+                _log.LogError(ioEx, "HandbookController | Delete | Error al borrar archivo físico");
+                return StatusCode(500, new { succes = false, message = "El archivo está siendo usado por otro proceso y no pudo eliminarse" });
+            }
+
+            db.tblDocumentacion.Remove(doc);
+            await db.SaveChangesAsync(ct);
+
+            return Ok(new { succes = true, message = "Documento y archivo eliminados correctamente" });
+        }
+        catch (Exception ex)
+        {
+            _log.LogError(ex, "HandbookController | Delete | Error");
+            return StatusCode(500, new { succes = false, message = "Error interno al intentar eliminar el registro" });
         }
     }
 
