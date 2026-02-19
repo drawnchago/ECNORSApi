@@ -15,7 +15,8 @@ namespace ECNORSAppData.Services
         Task<List<DispensaryDto>> GetDispensariosAsync(string station, CancellationToken ct);
         Task<string> GetDbInfoAsync(string station,CancellationToken ct = default);
         Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(string station, int dispensaryId, CancellationToken ct = default);
-        Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station, int dispensaryId, CancellationToken ct = default);
+        Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station,int dispensaryId,DateTime? day = null,CancellationToken ct = default);
+
         Task<TransactionDto?> GetTransactionBySequenceAsync(string station, long secuencia, CancellationToken ct = default);
         Task CloseManualAsync(string station, int secuenciaBuscar, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default);
         Task<decimal> GetNetVolAutoAsync(string station,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default);
@@ -78,20 +79,32 @@ namespace ECNORSAppData.Services
 
             return list;
         }
-        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station, int dispensaryId, CancellationToken ct = default)
+        public async Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station,int dispensaryId,DateTime? day = null,CancellationToken ct = default)
         {
             await using var db = CreateDb(station);
-            var conn = db.Database.GetDbConnection();
-            var fromDate = DateTime.Now.AddHours(-24);
+
+            DateTime start;
+            DateTime end;
+
+            if (day.HasValue)
+            {
+                start = day.Value.Date;
+                end = start.AddDays(1);
+            }
+            else
+            {
+                start = DateTime.Now.AddHours(-24);
+                end = DateTime.Now;
+            }
 
             var query = db.tblBitacoras
                 .AsNoTracking()
-                .Where(b => b.datFechaHora.HasValue &&
-                            b.datFechaHora.Value >= fromDate &&
-
-                            !new[] { "CERRADA", "FUERA DE LINEA" }.Contains(b.strObservaciones)
-
-            );
+                .Where(b =>
+                    b.datFechaHora.HasValue &&
+                    b.datFechaHora.Value >= start &&
+                    b.datFechaHora.Value < end &&
+                    !new[] { "CERRADA", "FUERA DE LINEA" }.Contains(b.strObservaciones)
+                );
 
             if (dispensaryId != 0)
             {
@@ -100,32 +113,27 @@ namespace ECNORSAppData.Services
                     b.intDispensario.Value == dispensaryId);
             }
 
-            var list = await query
-                .OrderByDescending(b => b.intSecuencia)
-                .Take(7)
+            return await query
+                .OrderByDescending(b => b.datFechaHora)
+                .Take(20)
                 .Select(b => new BinnacleDto
                 {
                     id = b.intSecuencia,
                     Date = b.datFechaHora,
-
                     Observations = b.strObservaciones,
                     Scheduled = (double?)b.dblProgramado,
                     Sold = (double?)b.dblVendido,
                     SoldVolume = (double?)b.dblVolumenVendido,
                     UnitPrice = (double?)b.dblPrecioUnitario,
                     Closed = b.bitCerrada,
-
                     DispensaryId = b.intDispensario,
                     HoseId = b.intManguera,
                     ProductId = b.intProducto,
-
                     Totalizator = b.strTotalizador,
                     OriginTotalizator = b.strTotalizadorOriginal,
                     EndTotalizator = b.strTotalizadorFinalOriginal
                 })
                 .ToListAsync(ct);
-
-            return list;
         }
 
 
@@ -141,7 +149,7 @@ namespace ECNORSAppData.Services
 
             var list = await query
                 .OrderByDescending(t => t.intSecuencia)
-                .Take(7)
+                .Take(20)
                 .Select(t => new TransactionDto
                 {
                     id = (int)t.intSecuencia,

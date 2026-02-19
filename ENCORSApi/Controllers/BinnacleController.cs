@@ -23,33 +23,41 @@ public sealed class BinnacleController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Top([FromQuery] string station,int dispensaryId, CancellationToken ct)
+    public async Task<IActionResult> Top([FromQuery] string station, [FromQuery] int dispensaryId, [FromQuery] DateTime selectedDay, CancellationToken ct)
     {
-        _log.LogInformation("BinnacleController | Top | Start | Estacion={station} | dispensaryId={DispensaryId}", station ,dispensaryId);
+        _log.LogInformation("BinnacleController | Top | Start | Estacion={station} | dispensaryId={DispensaryId} | day={Day}",station, dispensaryId, selectedDay);
+
 
         if (dispensaryId <= 0)
         {
-            _log.LogWarning("BinnacleController | Top | dispensaryIsNUll | Estacion={station} | dispensaryId inválido: {DispensaryId}", station, dispensaryId);
+            _log.LogWarning("BinnacleController | Top | dispensaryIsNUll | Estacion={station} | dispensaryId inválido: {DispensaryId} | day={Day}", station, dispensaryId, selectedDay);
             return BadRequest(new { Success = false, Message = "El parámetro 'dispensaryId' debe ser mayor a cero."});
         }
-
+        if (selectedDay == default)
+        {
+            return BadRequest(new
+            {
+                Success = false,
+                Message = "Debe proporcionar una fecha válida (selectedDay)."
+            });
+        }
         try
         {
-            _log.LogInformation("BinnacleController | Top | Try | Estacion={station} | Id={DispensaryId} ", station, dispensaryId);
-            var list = await _svc.GetBinnacleTopAsync(station, dispensaryId, ct);
+            _log.LogInformation("BinnacleController | Top | Try | Estacion={station} | Id={DispensaryId} | day={Day}", station, dispensaryId, selectedDay);
+            var list = await _svc.GetBinnacleTopAsync(station, dispensaryId, selectedDay, ct);
 
             if (list is null || list.Count == 0)
             {
-                _log.LogWarning("BinnacleController | Top | NotFound(List) | Estacion={station} | dispensaryId={DispensaryId}", station, dispensaryId);
+                _log.LogWarning("BinnacleController | Top | NotFound(List) | Estacion={station} | dispensaryId={DispensaryId} | day={Day}", station, dispensaryId, selectedDay);
                 return NotFound(new{ Success = false, Message = $"No se encontró bitácora para el dispensario {dispensaryId}.",Data = Array.Empty<object>()});
             }
 
-            _log.LogInformation("BinnacleController | Top | End(Ok) | Estacion={station} | Id={DispensaryId} | count={Count}", station, dispensaryId, list.Count);
+            _log.LogInformation("BinnacleController | Top | End(Ok) | Estacion={station} | Id={DispensaryId} | count={Count} | day={Day}", station, dispensaryId, list.Count);
             return Ok(new{ Success = true, Message = "Bitácora obtenida correctamente",Data = list});
         
         }catch (Exception ex)
         {
-            _log.LogError(ex, "BinnacleController | Top | End(Err) | dispensary| Estacion={station} | Id={DispensaryId}", station,dispensaryId);
+            _log.LogError(ex, "BinnacleController | Top | End(Err) | dispensary| Estacion={station} | Id={DispensaryId} | day={Day}", station,dispensaryId, selectedDay);
             return StatusCode(500, new { Success = false, Message = "Error al obtener la bitácora top"});
         }
     }

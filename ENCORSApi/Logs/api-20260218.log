@@ -153,3 +153,5 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red
    at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 53
 ClientConnectionId:00000000-0000-0000-0000-000000000000
 Error Number:2,State:0,Class:20
+2026-02-18 16:12:40.302 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=1 | day="2026-02-18T00:00:00.0000000"
+2026-02-18 16:12:40.347 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=1 | day="2026-02-18T00:00:00.0000000"
