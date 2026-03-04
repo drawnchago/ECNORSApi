@@ -1,0 +1,340 @@
+2026-03-04 11:05:09.998 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 11:05:19.615 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=9620
+2026-03-04 11:05:19.759 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 11:05:19.762 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 11:05:20.513 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 11:05:35.205 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 11:05:35.300 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=95
+2026-03-04 11:05:35.319 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 11:05:35.323 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 11:05:35.422 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 11:05:38.612 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 11:05:38.615 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=2
+2026-03-04 11:05:38.623 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 11:05:38.625 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 11:05:38.728 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 11:05:42.740 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 11:05:48.158 -06:00 [INF] DbInfo END OK | station=Queretaro | ms=5418
+2026-03-04 11:05:48.169 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-03-04 11:05:48.171 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-03-04 11:05:48.299 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-03-04 11:05:52.667 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 11:05:52.670 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=2
+2026-03-04 11:05:52.682 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 11:05:52.684 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 11:05:52.750 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 11:05:56.626 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 11:05:56.631 -06:00 [INF] DbInfo END OK | station=Queretaro | ms=4
+2026-03-04 11:05:56.641 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-03-04 11:05:56.643 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-03-04 11:05:56.730 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-03-04 11:06:01.057 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 11:06:01.060 -06:00 [INF] DbInfo END OK | station=Queretaro | ms=2
+2026-03-04 11:06:01.069 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-03-04 11:06:01.071 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-03-04 11:06:01.218 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-03-04 11:06:03.747 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=1 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 11:06:03.751 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=1 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 11:06:03.774 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:06:03.775 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:06:04.104 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:06:09.106 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Queretaro | dispensaryId=1 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 11:06:16.158 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:06:16.158 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:06:16.160 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:06:16.162 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:06:16.255 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:34.941 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:34.942 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:34.944 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:34.947 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:40.529 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:48.995 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:48.996 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:48.997 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:48.998 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:49.191 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:52.218 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:52.220 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:52.222 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:52.223 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:52.414 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:58.243 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:58.245 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:58.248 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:19:58.248 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:19:58.343 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:20:55.411 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:20:55.418 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=1 | day="2026-03-03T00:00:00.0000000"
+2026-03-04 11:20:55.418 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:20:55.422 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:20:55.679 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 1
+2026-03-04 11:24:32.357 -06:00 [INF] DbInfo START | station=Toluca
+2026-03-04 11:24:37.325 -06:00 [INF] DbInfo END OK | station=Toluca | ms=4968
+2026-03-04 11:24:37.338 -06:00 [INF] DispensaryController | Get | Start | Estation Toluca 
+2026-03-04 11:24:37.339 -06:00 [INF] DispensaryController | Get | Try| Estation Toluca 
+2026-03-04 11:24:37.410 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Toluca 
+2026-03-04 11:24:40.283 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 11:24:45.300 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=5016
+2026-03-04 11:24:45.320 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 11:24:45.321 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 11:24:50.268 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 11:24:53.469 -06:00 [INF] DbInfo START | station=Toluca
+2026-03-04 11:24:53.471 -06:00 [INF] DbInfo END OK | station=Toluca | ms=2
+2026-03-04 11:24:53.481 -06:00 [INF] DispensaryController | Get | Start | Estation Toluca 
+2026-03-04 11:24:53.482 -06:00 [INF] DispensaryController | Get | Try| Estation Toluca 
+2026-03-04 11:24:53.557 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Toluca 
+2026-03-04 11:24:56.044 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 11:24:56.046 -06:00 [INF] DbInfo END OK | station=Queretaro | ms=2
+2026-03-04 11:24:56.053 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-03-04 11:24:56.055 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-03-04 11:24:56.162 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-03-04 11:24:59.393 -06:00 [INF] DbInfo START | station=Villa Hermosa
+2026-03-04 11:25:00.108 -06:00 [INF] DbInfo END OK | station=Villa Hermosa | ms=715
+2026-03-04 11:25:00.119 -06:00 [INF] DispensaryController | Get | Start | Estation Villa Hermosa 
+2026-03-04 11:25:00.120 -06:00 [INF] DispensaryController | Get | Try| Estation Villa Hermosa 
+2026-03-04 11:25:00.210 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Villa Hermosa 
+2026-03-04 11:25:03.872 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 11:25:03.875 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=2
+2026-03-04 11:25:03.884 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 11:25:03.885 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 11:25:03.984 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 11:26:27.067 -06:00 [INF] HandbookController | List | DefaultConnection
+2026-03-04 11:26:31.877 -06:00 [INF] HandbookController | List | DefaultConnection
+2026-03-04 11:26:42.481 -06:00 [ERR] HandbookController | List | Error
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 40
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 53
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-04 11:26:42.481 -06:00 [ERR] HandbookController | List | Error
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 40
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 53
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-04 11:27:37.979 -06:00 [INF] HandbookController | List | DefaultConnection
+2026-03-04 11:27:53.100 -06:00 [ERR] HandbookController | List | Error
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 40
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 53
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-04 11:31:57.816 -06:00 [INF] HandbookController | List | DefaultConnection
+2026-03-04 11:32:12.951 -06:00 [ERR] HandbookController | List | Error
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 40
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 53
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-04 11:32:31.403 -06:00 [INF] HandbookController | List | DefaultConnection
+2026-03-04 11:32:46.523 -06:00 [ERR] HandbookController | List | Error
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 40
+   at ENCORSApi.Controllers.HandbookController.List(CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\HanbookController.cs:line 53
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-04 12:24:50.486 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 12:24:55.519 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=5033
+2026-03-04 12:24:55.656 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 12:24:55.657 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 12:24:55.748 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 12:26:59.070 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 12:27:08.238 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=9170
+2026-03-04 12:27:08.419 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 12:27:08.421 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 12:27:09.262 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 12:28:51.843 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 12:28:51.941 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=97
+2026-03-04 12:28:51.966 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 12:28:51.968 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 12:28:52.072 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 12:29:11.398 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 12:29:11.401 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=3
+2026-03-04 12:29:11.507 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 12:29:11.508 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 12:29:11.591 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 12:29:16.901 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 12:29:16.904 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=3
+2026-03-04 12:29:16.913 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 12:29:16.914 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 12:29:16.982 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 12:29:21.763 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 12:29:27.051 -06:00 [INF] DbInfo END OK | station=Queretaro | ms=5288
+2026-03-04 12:29:27.062 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-03-04 12:29:27.064 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-03-04 12:29:27.202 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-03-04 12:29:33.183 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 12:29:33.186 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=2
+2026-03-04 12:29:33.195 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 12:29:33.196 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 12:29:33.258 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 12:29:36.489 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 12:29:36.493 -06:00 [INF] DbInfo END OK | station=Queretaro | ms=3
+2026-03-04 12:29:36.504 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-03-04 12:29:36.506 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-03-04 12:29:36.617 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-03-04 12:29:39.907 -06:00 [INF] DbInfo START | station=Toluca
+2026-03-04 12:29:44.845 -06:00 [INF] DbInfo END OK | station=Toluca | ms=4937
+2026-03-04 12:29:44.858 -06:00 [INF] DispensaryController | Get | Start | Estation Toluca 
+2026-03-04 12:29:44.860 -06:00 [INF] DispensaryController | Get | Try| Estation Toluca 
+2026-03-04 12:29:44.933 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Toluca 
+2026-03-04 13:10:43.215 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 13:10:51.874 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=8662
+2026-03-04 13:10:52.055 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 13:10:52.058 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 13:10:52.868 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 13:11:13.575 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 13:11:13.669 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=94
+2026-03-04 13:11:13.835 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 13:11:13.837 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 13:11:13.937 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 13:11:17.968 -06:00 [INF] BinnacleController | Top | Start | Estacion=Monterrey | dispensaryId=2 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 13:11:17.972 -06:00 [INF] BinnacleController | Top | Try | Estacion=Monterrey | Id=2 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 13:11:17.975 -06:00 [INF] TransactionController | Top |  Start | Estacion: Monterrey |  dispensaryId: 2
+2026-03-04 13:11:17.976 -06:00 [INF] TransactionController | Top |  Try | Estacion: Monterrey |  dispensaryId: 2
+2026-03-04 13:11:18.181 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Monterrey |  dispensaryId: 2
+2026-03-04 13:11:23.004 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 13:11:23.091 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Monterrey | dispensaryId=2 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 13:11:27.170 -06:00 [ERR] DbInfo END ERR | station=Queretaro | ms=4166
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 56
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 63
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 29
+2026-03-04 13:12:53.200 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 13:12:53.204 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=3
+2026-03-04 13:12:53.343 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 13:12:53.345 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 13:12:53.455 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-04 13:12:59.550 -06:00 [INF] DbInfo START | station=Queretaro
+2026-03-04 13:12:59.554 -06:00 [INF] DbInfo END OK | station=Queretaro | ms=3
+2026-03-04 13:12:59.565 -06:00 [INF] DispensaryController | Get | Start | Estation Queretaro 
+2026-03-04 13:12:59.567 -06:00 [INF] DispensaryController | Get | Try| Estation Queretaro 
+2026-03-04 13:12:59.685 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Queretaro 
+2026-03-04 13:15:33.786 -06:00 [INF] TransactionController | Top |  Start | Estacion: Queretaro |  dispensaryId: 2
+2026-03-04 13:15:33.787 -06:00 [INF] BinnacleController | Top | Start | Estacion=Queretaro | dispensaryId=2 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 13:15:33.789 -06:00 [INF] TransactionController | Top |  Try | Estacion: Queretaro |  dispensaryId: 2
+2026-03-04 13:15:33.791 -06:00 [INF] BinnacleController | Top | Try | Estacion=Queretaro | Id=2 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 13:15:33.934 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Queretaro |  dispensaryId: 2
+2026-03-04 13:15:39.007 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Queretaro | dispensaryId=2 | day="2026-03-04T00:00:00.0000000"
+2026-03-04 13:51:39.034 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-04 13:51:43.983 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=4948
+2026-03-04 13:51:44.185 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-04 13:51:44.188 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-04 13:51:44.293 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
