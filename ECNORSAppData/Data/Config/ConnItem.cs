@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace ECNORSAppData.Data.Config;
 
@@ -45,6 +46,18 @@ public class ConnectionSelector : IConnectionSelector
     }
 
     public string BuildConnectionString(ConnItem item)
-        => $"Server={item.ip};Initial Catalog={item.bd};User ID={item.user};Password={item.pass};TrustServerCertificate=True;";
+    {
+        var builder = new SqlConnectionStringBuilder
+        {
+            DataSource = item.ip,
+            InitialCatalog = item.bd,
+            UserID = item.user,
+            Password = item.pass,
+            TrustServerCertificate = true,
+            MinPoolSize = 1
+        };
+
+        return builder.ConnectionString;
+    }
 
 }
