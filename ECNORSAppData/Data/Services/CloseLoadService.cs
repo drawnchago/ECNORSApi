@@ -73,7 +73,12 @@ namespace ECNORSAppData.Services
                 .OrderBy(d => d.intDispensario)
                 .Select(d => new DispensaryDto
                 {
-                    DispensaryId = d.intDispensario
+                    DispensaryId = d.intDispensario,
+                    IslaId = d.intIsla, 
+                    Generado = d.bitGenerado,
+                    Sirviendo = d.bitSirviendo,
+                    Despacho = d.bitDespacho,
+                    Estatus = d.intEstatus
                 })
                 .ToListAsync(ct);
 
