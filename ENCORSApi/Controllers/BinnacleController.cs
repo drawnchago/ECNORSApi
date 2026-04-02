@@ -15,6 +15,43 @@ public sealed class BinnacleController : ControllerBase
     private readonly ICloseLoadService _svc;
     private readonly ILogger<BinnacleController> _log;
 
+    [HttpGet("by-sequence")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> GetBinnacleBySequence([FromQuery] string station, [FromQuery] long secuencia, CancellationToken ct)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(station))
+                return BadRequest(new { success = false, message = "La estación es requerida." });
+
+            if (secuencia <= 0)
+                return BadRequest(new { success = false, message = "La secuencia es inválida." });
+
+            var result = await _svc.GetBinnacleBySequenceAsync(station, secuencia, ct);
+
+            if (result is null)
+                return NotFound(new { success = false, message = "No se encontró la bitácora." });
+
+            return Ok(new
+            {
+                success = true,
+                message = "Bitácora encontrada.",
+                data = result
+            });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new
+            {
+                success = false,
+                message = "Error al consultar la bitácora por secuencia.",
+                detail = ex.Message
+            });
+        }
+    }
     public BinnacleController(ICloseLoadService svc, ILogger<BinnacleController> log)=> (_svc, _log) = (svc, log);
 
     /*OBTIENE EL TOP 7 DE TBLBITACORAS*/

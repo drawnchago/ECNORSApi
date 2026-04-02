@@ -170,4 +170,5 @@ public sealed class TransactionController : ControllerBase
             return StatusCode(500, new { Success = false, Message = "Error al ejecutar el cierre forzado." });
         }
     }
+
 }

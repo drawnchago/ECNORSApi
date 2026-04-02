@@ -1,0 +1,414 @@
+2026-03-26 10:08:11.616 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:08:11.679 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:08:30.938 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+2026-03-26 10:08:54.208 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:08:54.210 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:09:09.339 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-26 10:12:42.923 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:12:42.925 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:12:58.156 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+2026-03-26 10:14:11.494 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:14:11.496 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:14:26.654 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+2026-03-26 10:14:36.125 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-25T00:00:00.0000000"
+2026-03-26 10:14:36.129 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-25T00:00:00.0000000"
+2026-03-26 10:14:51.276 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-25T00:00:00.0000000"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-26 10:14:55.230 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=0 | day="2026-03-25T00:00:00.0000000"
+2026-03-26 10:14:55.233 -06:00 [WRN] BinnacleController | Top | dispensaryIsNUll | Estacion=Laboratorio | dispensaryId inválido: 0 | day="2026-03-25T00:00:00.0000000"
+2026-03-26 10:14:58.749 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-25T00:00:00.0000000"
+2026-03-26 10:14:58.751 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-25T00:00:00.0000000"
+2026-03-26 10:15:13.945 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-25T00:00:00.0000000"
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+2026-03-26 10:15:28.899 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:15:28.902 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:15:44.063 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-26 10:15:56.431 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:15:56.434 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:16:11.577 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-26 10:17:32.312 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:17:32.313 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:17:47.429 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+2026-03-26 10:20:00.743 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:20:00.745 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:20:15.940 -06:00 [ERR] BinnacleController | Top | End(Err) | dispensary| Estacion=Laboratorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 47
+2026-03-26 10:21:41.419 -06:00 [INF] BinnacleController | Top | Start | Estacion=Labortatorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:21:41.469 -06:00 [INF] BinnacleController | Top | Try | Estacion=Labortatorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:22:00.738 -06:00 [ERR] BinnacleController | Top | End(Err) | Estacion=Labortatorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 64
+2026-03-26 10:22:10.259 -06:00 [INF] BinnacleController | Top | Start | Estacion=Labortatorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:22:10.261 -06:00 [INF] BinnacleController | Top | Try | Estacion=Labortatorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:22:25.422 -06:00 [ERR] BinnacleController | Top | End(Err) | Estacion=Labortatorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 64
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-26 10:22:54.155 -06:00 [INF] BinnacleController | Top | Start | Estacion=Labortatorio | dispensaryId=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:22:54.158 -06:00 [INF] BinnacleController | Top | Try | Estacion=Labortatorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+2026-03-26 10:23:09.417 -06:00 [ERR] BinnacleController | Top | End(Err) | Estacion=Labortatorio | Id=1 | day="2026-03-26T00:00:00.0000000"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ECNORSAppData.Services.CloseLoadService.GetBinnacleTopAsync(String station, Int32 dispensaryId, Nullable`1 day, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 121
+   at ENCORSApi.Controllers.BinnacleController.Top(String station, Int32 dispensaryId, DateTime selectedDay, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\BinnacleController.cs:line 64
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-26 10:32:06.094 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-03-26 10:32:21.212 -06:00 [ERR] DbInfo END ERR | station=Laboratorio | ms=15117
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 56
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 63
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 29
+2026-03-26 10:33:21.650 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-03-26 10:33:36.800 -06:00 [ERR] DbInfo END ERR | station=Laboratorio | ms=15150
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 56
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 63
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 29
+2026-03-26 10:33:40.162 -06:00 [INF] DbInfo START | station=Monterrey
+2026-03-26 10:33:45.323 -06:00 [INF] DbInfo END OK | station=Monterrey | ms=5160
+2026-03-26 10:33:45.357 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
+2026-03-26 10:33:45.359 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
+2026-03-26 10:33:45.543 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
+2026-03-26 10:34:32.993 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-03-26 10:34:48.192 -06:00 [ERR] DbInfo END ERR | station=Laboratorio | ms=15199
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 56
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 63
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 29
+2026-03-26 10:34:49.932 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-03-26 10:35:05.073 -06:00 [ERR] DbInfo END ERR | station=Laboratorio | ms=15141
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): El sistema no puede encontrar el archivo especificado.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 56
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 63
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 29
+2026-03-26 10:36:23.763 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-03-26 10:36:38.883 -06:00 [ERR] DbInfo END ERR | station=Laboratorio | ms=15119
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 56
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 63
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 29
+2026-03-26 10:39:51.245 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-03-26 10:40:06.351 -06:00 [ERR] DbInfo END ERR | station=Laboratorio | ms=15106
+System.InvalidOperationException: Error al validar conexión con la base de datos.
+ ---> System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 56
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 59
+   --- End of inner exception stack trace ---
+   at ECNORSAppData.Services.CloseLoadService.GetDbInfoAsync(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ECNORSAppData\Data\Services\CloseLoadService.cs:line 63
+   at ENCORSApi.Controllers.StationController.DbInfo(String station, CancellationToken ct) in C:\Users\S.padilla\source\repos\ENCORSApi\ENCORSApi\Controllers\StationController.cs:line 29

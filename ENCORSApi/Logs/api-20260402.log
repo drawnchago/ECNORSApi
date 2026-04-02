@@ -1,0 +1,5 @@
+2026-04-02 08:12:31.084 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 08:12:31.234 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=150
+2026-04-02 08:12:31.596 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 08:12:31.598 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 08:12:31.637 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
