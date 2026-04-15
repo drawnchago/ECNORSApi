@@ -1,9 +1,0 @@
-2026-03-25 08:37:09.526 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
-2026-03-25 08:37:09.586 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
-2026-03-25 08:37:19.113 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
-2026-03-25 10:09:20.243 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
-2026-03-25 10:09:20.310 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
-2026-03-25 10:09:29.986 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 
-2026-03-25 10:38:29.843 -06:00 [INF] DispensaryController | Get | Start | Estation Monterrey 
-2026-03-25 10:38:29.845 -06:00 [INF] DispensaryController | Get | Try| Estation Monterrey 
-2026-03-25 10:38:29.990 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Monterrey 

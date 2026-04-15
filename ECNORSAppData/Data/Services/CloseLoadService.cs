@@ -16,7 +16,7 @@ namespace ECNORSAppData.Services
         Task<string> GetDbInfoAsync(string station,CancellationToken ct = default);
         Task<IReadOnlyList<TransactionDto>> GetTransactionsTopAsync(string station, int dispensaryId, CancellationToken ct = default);
         Task<IReadOnlyList<BinnacleDto>> GetBinnacleTopAsync(string station,int dispensaryId,DateTime? day = null,CancellationToken ct = default);
-
+        Task<BinnacleDto?> GetBinnacleBySequenceAsync(string station, long secuencia, CancellationToken ct = default);
         Task<TransactionDto?> GetTransactionBySequenceAsync(string station, long secuencia, CancellationToken ct = default);
         Task CloseManualAsync(string station, int secuenciaBuscar, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default);
         Task<decimal> GetNetVolAutoAsync(string station,int intDispensario,int intProducto,decimal temperatura,decimal volumenGross,CancellationToken ct = default);
@@ -106,9 +106,11 @@ namespace ECNORSAppData.Services
                 .AsNoTracking()
                 .Where(b =>
                     b.datFechaHora.HasValue &&
-                    b.datFechaHora.Value >= start &&
-                    b.datFechaHora.Value < end &&
-                    !new[] { "CERRADA", "FUERA DE LINEA" }.Contains(b.strObservaciones)
+                    b.datFechaHora.Value >= start 
+                    //&&
+                    //b.datFechaHora.Value < end &&
+                    //!new[] { "CERRADA", "FUERA DE LINEA" }.Contains(b.strObservaciones
+                    //)
                 );
 
             if (dispensaryId != 0)
@@ -176,17 +178,45 @@ namespace ECNORSAppData.Services
             return await db.tblTransacciones
                 .AsNoTracking()
                 .Where(t => t.intSecuencia == secuencia)
+                .OrderByDescending(t => t.datFechahora)
                 .Select(t => new TransactionDto
                 {
                     id = t.intID,
                     Date = t.datFechahora,
                     Volume = t.dblVolumen,
                     Amount = t.dblImporte,
-                    UnitPrice = t.dblPrecioUnitario
+                    UnitPrice = t.dblPrecioUnitario,
+                    strTotalizadorFinal = t.strTotalizadorFinal
                 })
                 .FirstOrDefaultAsync(ct);
         }
+        public async Task<BinnacleDto?> GetBinnacleBySequenceAsync(string station, long secuencia, CancellationToken ct = default)
+        {
+            await using var db = CreateDb(station);
 
+            return await db.tblBitacoras
+                .AsNoTracking()
+                .Where(b => b.intSecuencia == secuencia)
+                .OrderByDescending(b => b.datFechaHora)
+                .Select(b => new BinnacleDto
+                {
+                    id = b.intSecuencia,
+                    Date = b.datFechaHora,
+                    Observations = b.strObservaciones,
+                    Scheduled = (double?)b.dblProgramado,
+                    Sold = (double?)b.dblVendido,
+                    SoldVolume = (double?)b.dblVolumenVendido,
+                    UnitPrice = (double?)b.dblPrecioUnitario,
+                    Closed = b.bitCerrada,
+                    DispensaryId = b.intDispensario,
+                    HoseId = b.intManguera,
+                    ProductId = b.intProducto,
+                    Totalizator = b.strTotalizador,
+                    OriginTotalizator = b.strTotalizadorOriginal,
+                    EndTotalizator = b.strTotalizadorFinalOriginal
+                })
+                .FirstOrDefaultAsync(ct);
+        }
         public async Task CloseManualAsync(string station, int secuenciaBuscar, decimal volumenGross, decimal volumenNetoCt, decimal temperatura, CancellationToken ct = default)
         {
             try

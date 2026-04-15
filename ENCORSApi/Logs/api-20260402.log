@@ -3,3 +3,489 @@
 2026-04-02 08:12:31.596 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
 2026-04-02 08:12:31.598 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
 2026-04-02 08:12:31.637 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 08:21:35.458 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:21:35.460 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:21:35.514 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 08:21:35.516 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 08:21:35.563 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:21:35.644 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 08:21:41.346 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 08:21:41.348 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 08:21:41.351 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:21:41.354 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:21:41.364 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 08:21:41.576 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:22:12.519 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 08:22:12.521 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 08:22:12.531 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:22:12.533 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 08:22:12.573 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:47:55.392 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 09:47:55.467 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=75
+2026-04-02 09:47:55.930 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 09:47:55.932 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 09:47:55.957 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 09:47:59.231 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:47:59.237 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:47:59.283 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:47:59.440 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:47:59.442 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:47:59.470 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:49:26.574 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:49:26.579 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:49:26.615 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:49:26.617 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:49:26.626 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:39.259 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 09:51:39.263 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 09:51:39.652 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 09:51:39.654 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 09:51:39.670 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 09:51:43.716 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:51:43.720 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:51:43.733 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:51:43.768 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:43.770 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:43.777 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:46.428 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:51:46.430 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:51:46.438 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:46.440 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:46.443 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:51:46.447 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:53.399 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:51:53.401 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:51:53.412 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:53.413 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:53.487 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:53.945 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:51:53.946 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:51:53.958 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:53.959 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:51:53.966 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:54:22.950 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 09:54:22.954 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 09:54:23.267 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 09:54:23.269 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 09:54:23.279 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 09:54:26.504 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:54:26.506 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:54:26.518 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 09:54:26.539 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:54:26.541 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:54:26.553 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:54:33.764 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:54:33.766 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 09:54:33.811 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:54:33.813 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 09:54:33.820 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:00:45.098 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:00:45.100 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:00:45.134 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:00:45.135 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:00:45.153 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:04:14.219 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:04:14.220 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:04:14.220 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:04:14.222 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:04:14.361 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:20:36.995 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 10:20:36.999 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 10:20:37.260 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 10:20:37.263 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 10:20:37.278 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 10:20:41.584 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:20:41.586 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:20:41.626 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:20:41.689 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:20:41.691 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:20:41.714 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:21:12.222 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:21:12.224 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:21:12.225 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:21:12.227 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:21:12.383 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:37:53.488 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 10:37:53.492 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 10:37:53.817 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 10:37:53.821 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 10:37:53.834 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 10:37:57.868 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:37:57.870 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:37:57.917 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:37:57.956 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:37:57.958 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:37:57.983 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:38:03.942 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:38:03.944 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:38:03.951 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:38:03.953 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:38:04.105 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:58:35.784 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 10:58:35.789 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=5
+2026-04-02 10:58:36.170 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 10:58:36.171 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 10:58:36.188 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 10:58:42.027 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:58:42.029 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:58:42.067 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 10:58:42.120 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:58:42.121 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:58:42.147 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:58:52.039 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:58:52.042 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:58:52.050 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:58:52.052 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:58:52.244 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:59:02.831 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:59:02.834 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 10:59:02.834 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:59:02.839 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 10:59:02.859 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:01:48.350 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 11:01:48.353 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 11:01:48.644 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 11:01:48.645 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 11:01:48.662 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 11:02:23.734 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:02:23.736 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:02:23.771 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:02:23.792 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:23.794 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:23.808 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:33.268 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:02:33.270 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:02:33.275 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:33.277 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:33.291 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:39.062 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:02:39.064 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:02:39.067 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:39.068 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:02:39.084 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:04:12.654 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 11:04:12.657 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=2
+2026-04-02 11:04:12.983 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 11:04:12.985 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 11:04:12.996 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 11:04:15.618 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:04:15.620 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:04:15.637 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:04:15.672 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:04:15.674 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:04:15.691 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:04:21.279 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:04:21.281 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:04:21.288 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:04:21.289 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:04:21.303 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:08:00.493 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 11:08:00.497 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 11:08:01.091 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 11:08:01.093 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 11:08:01.107 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 11:08:05.385 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:08:05.387 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:08:05.406 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:08:05.427 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:08:05.429 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:08:05.443 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:08:13.608 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:08:13.615 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:08:13.617 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:08:13.618 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:08:13.636 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:04.904 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 11:09:04.906 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=2
+2026-04-02 11:09:04.960 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 11:09:04.962 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 11:09:04.975 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 11:09:06.410 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:09:06.412 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:09:06.416 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:06.418 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:06.429 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:09:06.435 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:10.294 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:09:10.295 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:10.300 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:09:10.302 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:10.322 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:11.419 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:11.420 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:09:11.421 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:09:11.423 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:09:11.439 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:10:44.948 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 11:10:44.951 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 11:10:45.006 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 11:10:45.009 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 11:10:45.018 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 11:10:46.258 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:10:46.261 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:10:46.272 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:10:46.273 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:10:46.280 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 11:10:46.287 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:10:49.585 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:10:49.586 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:10:49.587 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 11:10:49.588 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 11:10:49.607 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:02:32.608 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:02:32.624 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=15
+2026-04-02 12:02:32.937 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:02:32.938 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:02:32.992 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:03:00.593 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:03:00.595 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:03:00.651 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:03:00.789 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:03:00.790 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:03:00.841 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:03:05.841 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:03:05.844 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:03:05.850 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:03:05.853 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:03:05.995 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:31.776 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:25:31.782 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=6
+2026-04-02 12:25:32.093 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:25:32.095 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:25:32.112 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:25:44.667 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:25:44.669 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:25:44.711 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:25:44.775 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:44.776 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:44.812 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:46.804 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:25:46.806 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:25:46.812 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:46.813 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:46.821 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:25:46.834 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:52.453 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:52.456 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:25:52.456 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:25:52.460 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:25:52.468 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:27:16.608 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:27:16.613 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=4
+2026-04-02 12:27:16.676 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:27:16.678 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:27:16.687 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:27:18.556 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:27:18.558 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:27:18.567 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:27:18.568 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:27:18.569 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:27:18.581 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:27:23.382 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:27:23.383 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:27:23.384 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:27:23.386 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:27:23.396 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:28:56.373 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:28:56.377 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=4
+2026-04-02 12:28:56.454 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:28:56.455 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:28:56.469 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:28:58.039 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:28:58.040 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:28:58.053 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:28:58.055 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:28:58.060 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:28:58.069 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:29:02.854 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:29:02.854 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:29:02.856 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:29:02.858 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:29:02.868 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:29:31.494 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:29:31.740 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:29:31.791 -06:00 [INF] TransactionController | BySequence | Start | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:29:31.792 -06:00 [INF] TransactionController| BySequence | Try | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:29:31.810 -06:00 [INF] TransactionController | BySequence | End(Ok) | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:35:20.320 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:35:20.323 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=2
+2026-04-02 12:35:20.377 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:35:20.379 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:35:20.385 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:35:21.793 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:35:21.795 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:35:21.802 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:21.803 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:21.809 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:35:21.813 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:22.892 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:22.892 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:35:22.897 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:22.900 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:35:22.906 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:23.032 -06:00 [WRN] BinnacleController | Top | NotFound(List) | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:35:26.947 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:26.947 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:35:26.950 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:35:26.952 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-01T00:00:00.0000000"
+2026-04-02 12:35:26.958 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:39:32.813 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:39:32.934 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:39:32.971 -06:00 [INF] TransactionController | BySequence | Start | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:39:32.973 -06:00 [INF] TransactionController| BySequence | Try | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:39:32.982 -06:00 [INF] TransactionController | BySequence | End(Ok) | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:43:25.628 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:43:25.631 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=2
+2026-04-02 12:43:25.691 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:43:25.692 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:43:25.710 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:43:27.137 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:43:27.139 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:43:27.150 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:43:27.152 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:43:27.305 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:43:28.696 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:43:28.697 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:43:28.704 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:43:28.705 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:43:28.711 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:43:42.304 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:43:42.414 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:43:42.464 -06:00 [INF] TransactionController | BySequence | Start | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:43:42.465 -06:00 [INF] TransactionController| BySequence | Try | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:43:42.475 -06:00 [INF] TransactionController | BySequence | End(Ok) | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:45:24.199 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:45:24.201 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=2
+2026-04-02 12:45:24.269 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:45:24.270 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:45:24.284 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:45:25.651 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:45:25.654 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:45:25.660 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:45:25.662 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:45:25.719 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:45:35.001 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:45:35.011 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:45:35.039 -06:00 [INF] TransactionController | BySequence | Start | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:45:35.041 -06:00 [INF] TransactionController| BySequence | Try | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:45:35.048 -06:00 [INF] TransactionController | BySequence | End(Ok) | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:47:51.727 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 12:47:51.731 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 12:47:51.793 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 12:47:51.794 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 12:47:51.802 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 12:47:53.296 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:47:53.297 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:47:53.305 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:47:53.306 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:47:53.314 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:47:55.622 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:47:55.622 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:47:55.624 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:47:55.625 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:47:55.633 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:48:55.852 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:48:55.852 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:48:55.853 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:48:55.855 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:48:55.862 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:05.289 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:05.289 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:51:05.290 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:05.291 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:51:05.298 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:20.719 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:20.719 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:51:20.722 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:51:20.721 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:20.727 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:21.920 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:51:21.920 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:21.924 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:21.923 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 12:51:21.929 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 12:51:30.000 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:51:30.015 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 12:51:30.036 -06:00 [INF] TransactionController | BySequence | Start | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:51:30.037 -06:00 [INF] TransactionController| BySequence | Try | Station: Laboratorio | Secuencia: 376309
+2026-04-02 12:51:30.045 -06:00 [INF] TransactionController | BySequence | End(Ok) | Station: Laboratorio | Secuencia: 376309
+2026-04-02 13:03:44.210 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 13:03:44.212 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=2
+2026-04-02 13:03:44.268 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 13:03:44.270 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 13:03:44.281 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 13:03:46.387 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:03:46.389 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:03:46.398 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:03:46.400 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:03:46.530 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:03:47.903 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:03:47.904 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:03:47.911 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:03:47.912 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:03:47.923 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:03:59.482 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 13:03:59.576 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 13:03:59.655 -06:00 [INF] TransactionController | BySequence | Start | Station: Laboratorio | Secuencia: 376309
+2026-04-02 13:03:59.657 -06:00 [INF] TransactionController| BySequence | Try | Station: Laboratorio | Secuencia: 376309
+2026-04-02 13:03:59.665 -06:00 [INF] TransactionController | BySequence | End(Ok) | Station: Laboratorio | Secuencia: 376309
+2026-04-02 13:08:51.520 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 13:08:51.524 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 13:08:51.582 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 13:08:51.584 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 13:08:51.594 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 13:08:53.038 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:08:53.045 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:08:53.046 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:08:53.048 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:08:53.210 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:08:56.790 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:08:56.790 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:08:56.791 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:08:56.793 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:08:56.798 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:15:46.781 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 13:15:46.788 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=6
+2026-04-02 13:15:46.851 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 13:15:46.854 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 13:15:46.866 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 13:15:48.277 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:15:48.278 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:15:48.293 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:15:48.294 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:15:48.311 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:19:25.331 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 13:19:25.335 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=3
+2026-04-02 13:19:25.383 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 13:19:25.385 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 13:19:25.396 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 13:19:26.764 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:19:26.767 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:19:26.771 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:19:26.772 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:19:26.898 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:20:47.054 -06:00 [INF] DbInfo START | station=Laboratorio
+2026-04-02 13:20:47.055 -06:00 [INF] DbInfo END OK | station=Laboratorio | ms=1
+2026-04-02 13:20:47.109 -06:00 [INF] DispensaryController | Get | Start | Estation Laboratorio 
+2026-04-02 13:20:47.112 -06:00 [INF] DispensaryController | Get | Try| Estation Laboratorio 
+2026-04-02 13:20:47.119 -06:00 [INF] DispensaryController | Get | End(Ok) | Estation Laboratorio 
+2026-04-02 13:20:48.571 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:20:48.573 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:20:48.578 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:20:48.580 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:20:48.588 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:22:04.458 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:22:04.458 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:22:04.460 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:22:04.462 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:22:04.512 -06:00 [INF] TransactionController | Top |  End(Ok) | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:22:26.866 -06:00 [INF] TransactionController | Top |  Start | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:22:26.866 -06:00 [INF] BinnacleController | Top | Start | Estacion=Laboratorio | dispensaryId=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:22:26.869 -06:00 [INF] TransactionController | Top |  Try | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:22:26.871 -06:00 [INF] BinnacleController | Top | Try | Estacion=Laboratorio | Id=1 | day="2026-04-02T00:00:00.0000000"
+2026-04-02 13:22:26.876 -06:00 [WRN] TransactionController | Top |  ListIsNull | Estacion: Laboratorio |  dispensaryId: 1
+2026-04-02 13:22:34.286 -06:00 [INF] BinnacleController | CloseManual |  Start | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 13:22:34.421 -06:00 [INF] BinnacleController | CloseManual | End(Ok) | Secuencia=376309 | Gross=1 | Neto=1 | Temp=1
+2026-04-02 13:22:34.706 -06:00 [INF] TransactionController | BySequence | Start | Station: Laboratorio | Secuencia: 376309
+2026-04-02 13:22:34.707 -06:00 [INF] TransactionController| BySequence | Try | Station: Laboratorio | Secuencia: 376309
+2026-04-02 13:22:34.717 -06:00 [INF] TransactionController | BySequence | End(Ok) | Station: Laboratorio | Secuencia: 376309
